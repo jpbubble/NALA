@@ -24,6 +24,7 @@
 // Version: 19.07.09
 // EndLic
 
+
 using System;
 
 namespace NALA
@@ -44,4 +45,5 @@ namespace NALA
         }
     }
 }
+
 

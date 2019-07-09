@@ -1,7 +1,7 @@
 [lic]
-src/bin/DesktopGL/AnyCPU/Release/BuildData.GINI
-Data about Bubble for MonoGame GL
-version: 19.05.11
+bin/DesktopGL/AnyCPU/Release/BuildData.GINI
+NALA Build Data
+version: 19.07.09
 Copyright (C)  Jeroen P. Broks
 This software is provided 'as-is', without any express or implied
 warranty.  In no event will the authors be held liable for any damages
@@ -17,6 +17,7 @@ appreciated but is not required.
 misrepresented as being the original software.
 3. This notice may not be removed or altered from any source distribution.
 [/lic]
+
 
 
 
@@ -39,6 +40,7 @@ NALA => {ExeName}
 [list:RUNMODES]
 CB
 RF
+
 
 
 

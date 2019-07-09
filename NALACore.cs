@@ -24,6 +24,7 @@
 // Version: 19.07.09
 // EndLic
 
+
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
@@ -122,4 +123,5 @@ namespace NALA {
         }
     }
 }
+
 
