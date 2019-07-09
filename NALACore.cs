@@ -40,7 +40,7 @@ namespace NALA {
     public class NALACore : Game {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
-        public static NALACore Core { get; private set};
+        public static NALACore Core { get; private set; } = null;
 
         public NALACore() {
             graphics = new GraphicsDeviceManager(this);
