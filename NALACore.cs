@@ -62,12 +62,6 @@ namespace NALA {
             base.Initialize();
             #endregion
 
-            #region Tricky's Quick Monogame Graphics
-            TQMG.Init(graphics, GraphicsDevice, spriteBatch, SBubble.JCR);
-            #endregion
-
-
-            BubbleInit.LetsGo();
         }
 
         /// <summary>
@@ -79,7 +73,13 @@ namespace NALA {
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
-            // TODO: use this.Content to load your game content here
+            #region Tricky's Quick Monogame Graphics
+            TQMG.Init(graphics, GraphicsDevice, spriteBatch, SBubble.JCR);
+            #endregion
+
+
+            BubbleInit.LetsGo();
+            
         }
 
         /// <summary>
