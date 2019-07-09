@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using TrickyUnits;
 using Bubble;
+using NSKthura;
 
 namespace NALA {
     static class BubbleInit {
@@ -27,7 +28,11 @@ namespace NALA {
             #endregion
 
             #region The stuff needed for NALA in particular
-            // TODO: API for Kthura
+            // Kthura Init
+            Kthura.SetDefaultTextureJCR(SBubble.JCR); // Textures are all in the same project
+            KthuraDraw.DrawDriver = new KthuraDrawMonoGame(); // Tell Kthura to use the MonoGame Driver to display the map
+            // SBubble Kthura API
+
             // TODO: API for TeddyBear
             // TODO: API for Swap Data Manager
             // TODO: API for RPGStat

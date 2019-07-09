@@ -155,6 +155,15 @@
     <Compile Include="..\..\JCR6\jcr6.cs">
       <Link>Code Dependencies\JCR6\jcr6.cs</Link>
     </Compile>
+    <Compile Include="..\..\Kthura\Source\Class\KthuraCore.cs">
+      <Link>Code Dependencies\Sub-Engines\Map\Kthura\KthuraCore.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Kthura\Source\Class\KthuraDraw.cs">
+      <Link>Code Dependencies\Sub-Engines\Map\Kthura\KthuraDraw.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Kthura\Source\Class\KthuraDrawMonoGame.cs">
+      <Link>Code Dependencies\Sub-Engines\Map\Kthura\KthuraDrawMonoGame.cs</Link>
+    </Compile>
     <Compile Include="..\..\TQMG\TQMG.cs">
       <Link>Code Dependencies\Tricky%27s Units\TQMG.cs</Link>
     </Compile>
