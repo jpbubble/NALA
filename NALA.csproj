@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Common.props')" />
   <PropertyGroup>
@@ -6,7 +6,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>ab54c851-35c7-4f58-9193-ceb22d4ebbdd</ProjectGuid>
+    <ProjectGuid>{AB54C851-35C7-4F58-9193-CEB22D4EBBDD}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>NALA</RootNamespace>
@@ -23,7 +23,7 @@
     <PlatformTarget>AnyCPU</PlatformTarget>
     <ErrorReport>prompt</ErrorReport>
     <Prefer32Bit>false</Prefer32Bit>
-	<WarningLevel>4</WarningLevel>
+    <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
     <OutputPath>bin\$(MonoGamePlatform)\$(Platform)\$(Configuration)\</OutputPath>
@@ -33,7 +33,7 @@
     <PlatformTarget>AnyCPU</PlatformTarget>
     <ErrorReport>prompt</ErrorReport>
     <Prefer32Bit>false</Prefer32Bit>
-	<WarningLevel>4</WarningLevel>
+    <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationIcon>Icon.ico</ApplicationIcon>
@@ -42,69 +42,212 @@
     <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Game1.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="..\..\JCR6\Drivers\Compression\jxsrcca\jcr6_jxsrcca.cs">
+      <Link>Code Dependencies\JCR6\Drivers\Compression Algorithms\jxsrcca\jcr6_jxsrcca.cs</Link>
+    </Compile>
+    <Compile Include="..\..\JCR6\Drivers\Compression\lzma\Common\CommandLineParser.cs">
+      <Link>Code Dependencies\JCR6\Drivers\Compression Algorithms\lzma\Common\CommandLineParser.cs</Link>
+    </Compile>
+    <Compile Include="..\..\JCR6\Drivers\Compression\lzma\Common\CRC.cs">
+      <Link>Code Dependencies\JCR6\Drivers\Compression Algorithms\lzma\Common\CRC.cs</Link>
+    </Compile>
+    <Compile Include="..\..\JCR6\Drivers\Compression\lzma\Common\InBuffer.cs">
+      <Link>Code Dependencies\JCR6\Drivers\Compression Algorithms\lzma\Common\InBuffer.cs</Link>
+    </Compile>
+    <Compile Include="..\..\JCR6\Drivers\Compression\lzma\Common\OutBuffer.cs">
+      <Link>Code Dependencies\JCR6\Drivers\Compression Algorithms\lzma\Common\OutBuffer.cs</Link>
+    </Compile>
+    <Compile Include="..\..\JCR6\Drivers\Compression\lzma\ICoder\ICoder.cs">
+      <Link>Code Dependencies\JCR6\Drivers\Compression Algorithms\lzma\ICoder\ICoder.cs</Link>
+    </Compile>
+    <Compile Include="..\..\JCR6\Drivers\Compression\lzma\lzma2jcr6.cs">
+      <Link>Code Dependencies\JCR6\Drivers\Compression Algorithms\lzma\lzma2jcr6.cs</Link>
+    </Compile>
+    <Compile Include="..\..\JCR6\Drivers\Compression\lzma\LZMA\LzmaBase.cs">
+      <Link>Code Dependencies\JCR6\Drivers\Compression Algorithms\lzma\LZMA\LzmaBase.cs</Link>
+    </Compile>
+    <Compile Include="..\..\JCR6\Drivers\Compression\lzma\LZMA\LzmaDecoder.cs">
+      <Link>Code Dependencies\JCR6\Drivers\Compression Algorithms\lzma\LZMA\LzmaDecoder.cs</Link>
+    </Compile>
+    <Compile Include="..\..\JCR6\Drivers\Compression\lzma\LZMA\LzmaEncoder.cs">
+      <Link>Code Dependencies\JCR6\Drivers\Compression Algorithms\lzma\LZMA\LzmaEncoder.cs</Link>
+    </Compile>
+    <Compile Include="..\..\JCR6\Drivers\Compression\lzma\LZ\IMatchFinder.cs">
+      <Link>Code Dependencies\JCR6\Drivers\Compression Algorithms\lzma\LZ\IMatchFinder.cs</Link>
+    </Compile>
+    <Compile Include="..\..\JCR6\Drivers\Compression\lzma\LZ\LzBinTree.cs">
+      <Link>Code Dependencies\JCR6\Drivers\Compression Algorithms\lzma\LZ\LzBinTree.cs</Link>
+    </Compile>
+    <Compile Include="..\..\JCR6\Drivers\Compression\lzma\LZ\LzInWindow.cs">
+      <Link>Code Dependencies\JCR6\Drivers\Compression Algorithms\lzma\LZ\LzInWindow.cs</Link>
+    </Compile>
+    <Compile Include="..\..\JCR6\Drivers\Compression\lzma\LZ\LzOutWindow.cs">
+      <Link>Code Dependencies\JCR6\Drivers\Compression Algorithms\lzma\LZ\LzOutWindow.cs</Link>
+    </Compile>
+    <Compile Include="..\..\JCR6\Drivers\Compression\lzma\RangeCoder\RangeCoder.cs">
+      <Link>Code Dependencies\JCR6\Drivers\Compression Algorithms\lzma\RangeCoder\RangeCoder.cs</Link>
+    </Compile>
+    <Compile Include="..\..\JCR6\Drivers\Compression\lzma\RangeCoder\RangeCoderBit.cs">
+      <Link>Code Dependencies\JCR6\Drivers\Compression Algorithms\lzma\RangeCoder\RangeCoderBit.cs</Link>
+    </Compile>
+    <Compile Include="..\..\JCR6\Drivers\Compression\lzma\RangeCoder\RangeCoderBitTree.cs">
+      <Link>Code Dependencies\JCR6\Drivers\Compression Algorithms\lzma\RangeCoder\RangeCoderBitTree.cs</Link>
+    </Compile>
+    <Compile Include="..\..\JCR6\Drivers\Compression\lzma\SevenZipHelper.cs">
+      <Link>Code Dependencies\JCR6\Drivers\Compression Algorithms\lzma\SevenZipHelper.cs</Link>
+    </Compile>
+    <Compile Include="..\..\JCR6\Drivers\Compression\zlib\zlib.cs">
+      <Link>Code Dependencies\JCR6\Drivers\Compression Algorithms\zlib\zlib.cs</Link>
+    </Compile>
+    <Compile Include="..\..\JCR6\Drivers\Compression\zlib\zlib\Adler32.cs">
+      <Link>Code Dependencies\JCR6\Drivers\Compression Algorithms\zlib\zlib\Adler32.cs</Link>
+    </Compile>
+    <Compile Include="..\..\JCR6\Drivers\Compression\zlib\zlib\AssemblyInfo.cs">
+      <Link>Code Dependencies\JCR6\Drivers\Compression Algorithms\zlib\zlib\AssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\..\JCR6\Drivers\Compression\zlib\zlib\Deflate.cs">
+      <Link>Code Dependencies\JCR6\Drivers\Compression Algorithms\zlib\zlib\Deflate.cs</Link>
+    </Compile>
+    <Compile Include="..\..\JCR6\Drivers\Compression\zlib\zlib\InfBlocks.cs">
+      <Link>Code Dependencies\JCR6\Drivers\Compression Algorithms\zlib\zlib\InfBlocks.cs</Link>
+    </Compile>
+    <Compile Include="..\..\JCR6\Drivers\Compression\zlib\zlib\InfCodes.cs">
+      <Link>Code Dependencies\JCR6\Drivers\Compression Algorithms\zlib\zlib\InfCodes.cs</Link>
+    </Compile>
+    <Compile Include="..\..\JCR6\Drivers\Compression\zlib\zlib\Inflate.cs">
+      <Link>Code Dependencies\JCR6\Drivers\Compression Algorithms\zlib\zlib\Inflate.cs</Link>
+    </Compile>
+    <Compile Include="..\..\JCR6\Drivers\Compression\zlib\zlib\InfTree.cs">
+      <Link>Code Dependencies\JCR6\Drivers\Compression Algorithms\zlib\zlib\InfTree.cs</Link>
+    </Compile>
+    <Compile Include="..\..\JCR6\Drivers\Compression\zlib\zlib\StaticTree.cs">
+      <Link>Code Dependencies\JCR6\Drivers\Compression Algorithms\zlib\zlib\StaticTree.cs</Link>
+    </Compile>
+    <Compile Include="..\..\JCR6\Drivers\Compression\zlib\zlib\SupportClass.cs">
+      <Link>Code Dependencies\JCR6\Drivers\Compression Algorithms\zlib\zlib\SupportClass.cs</Link>
+    </Compile>
+    <Compile Include="..\..\JCR6\Drivers\Compression\zlib\zlib\Tree.cs">
+      <Link>Code Dependencies\JCR6\Drivers\Compression Algorithms\zlib\zlib\Tree.cs</Link>
+    </Compile>
+    <Compile Include="..\..\JCR6\Drivers\Compression\zlib\zlib\ZInputStream.cs">
+      <Link>Code Dependencies\JCR6\Drivers\Compression Algorithms\zlib\zlib\ZInputStream.cs</Link>
+    </Compile>
+    <Compile Include="..\..\JCR6\Drivers\Compression\zlib\zlib\Zlib.cs">
+      <Link>Code Dependencies\JCR6\Drivers\Compression Algorithms\zlib\zlib\Zlib.cs</Link>
+    </Compile>
+    <Compile Include="..\..\JCR6\Drivers\Compression\zlib\zlib\ZOutputStream.cs">
+      <Link>Code Dependencies\JCR6\Drivers\Compression Algorithms\zlib\zlib\ZOutputStream.cs</Link>
+    </Compile>
+    <Compile Include="..\..\JCR6\Drivers\Compression\zlib\zlib\ZStream.cs">
+      <Link>Code Dependencies\JCR6\Drivers\Compression Algorithms\zlib\zlib\ZStream.cs</Link>
+    </Compile>
+    <Compile Include="..\..\JCR6\Drivers\Compression\zlib\zlib\ZStreamException.cs">
+      <Link>Code Dependencies\JCR6\Drivers\Compression Algorithms\zlib\zlib\ZStreamException.cs</Link>
+    </Compile>
+    <Compile Include="..\..\JCR6\Drivers\FileTypes\JCR5.cs">
+      <Link>Code Dependencies\JCR6\Drivers\File Types\JCR5.cs</Link>
+    </Compile>
+    <Compile Include="..\..\JCR6\Drivers\FileTypes\RealDir.cs">
+      <Link>Code Dependencies\JCR6\Drivers\File Types\RealDir.cs</Link>
+    </Compile>
+    <Compile Include="..\..\JCR6\jcr6.cs">
+      <Link>Code Dependencies\JCR6\jcr6.cs</Link>
+    </Compile>
+    <Compile Include="..\..\TrickyUnits\Dirry.cs">
+      <Link>Code Dependencies\Tricky%27s Units\Dirry.cs</Link>
+    </Compile>
+    <Compile Include="..\..\TrickyUnits\FileList.cs">
+      <Link>Code Dependencies\Tricky%27s Units\FileList.cs</Link>
+    </Compile>
+    <Compile Include="..\..\TrickyUnits\GINI Is Not Ini.cs">
+      <Link>Code Dependencies\Tricky%27s Units\GINI Is Not Ini.cs</Link>
+    </Compile>
+    <Compile Include="..\..\TrickyUnits\mkl.cs">
+      <Link>Code Dependencies\Tricky%27s Units\mkl.cs</Link>
+    </Compile>
+    <Compile Include="..\..\TrickyUnits\OpenURI.cs">
+      <Link>Code Dependencies\Tricky%27s Units\OpenURI.cs</Link>
+    </Compile>
+    <Compile Include="..\..\TrickyUnits\qstr.cs">
+      <Link>Code Dependencies\Tricky%27s Units\qstr.cs</Link>
+    </Compile>
+    <Compile Include="..\..\TrickyUnits\qstream.cs">
+      <Link>Code Dependencies\Tricky%27s Units\qstream.cs</Link>
+    </Compile>
+    <Compile Include="Code Dependencies\JCR6\BubbleInit.cs" />
+    <Compile Include="NALACore.cs" />
+    <Compile Include="VoidMain.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="MonoGame.Framework">
-       <HintPath>$(MonoGameInstallDirectory)\MonoGame\v3.0\Assemblies\DesktopGL\MonoGame.Framework.dll</HintPath>
+      <HintPath>$(MonoGameInstallDirectory)\MonoGame\v3.0\Assemblies\DesktopGL\MonoGame.Framework.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Icon.ico" />
-	<EmbeddedResource Include="Icon.bmp" />
+    <EmbeddedResource Include="Icon.bmp" />
   </ItemGroup>
   <ItemGroup>
     <MonoGameContentReference Include="Content\Content.mgcb" />
-	<None Include="$(MonoGameInstallDirectory)\MonoGame\v3.0\Assemblies\DesktopGL\x86\SDL2.dll">
+    <None Include="$(MonoGameInstallDirectory)\MonoGame\v3.0\Assemblies\DesktopGL\x86\SDL2.dll">
       <Link>x86\SDL2.dll</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-	<None Include="$(MonoGameInstallDirectory)\MonoGame\v3.0\Assemblies\DesktopGL\x64\SDL2.dll">
+    <None Include="$(MonoGameInstallDirectory)\MonoGame\v3.0\Assemblies\DesktopGL\x64\SDL2.dll">
       <Link>x64\SDL2.dll</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-	<None Include="$(MonoGameInstallDirectory)\MonoGame\v3.0\Assemblies\DesktopGL\x86\soft_oal.dll">
+    <None Include="$(MonoGameInstallDirectory)\MonoGame\v3.0\Assemblies\DesktopGL\x86\soft_oal.dll">
       <Link>x86\soft_oal.dll</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-	<None Include="$(MonoGameInstallDirectory)\MonoGame\v3.0\Assemblies\DesktopGL\x64\soft_oal.dll">
+    <None Include="$(MonoGameInstallDirectory)\MonoGame\v3.0\Assemblies\DesktopGL\x64\soft_oal.dll">
       <Link>x64\soft_oal.dll</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-		<None Include="$(MonoGameInstallDirectory)\MonoGame\v3.0\Assemblies\DesktopGL\x86\libSDL2-2.0.so.0">
+    <None Include="$(MonoGameInstallDirectory)\MonoGame\v3.0\Assemblies\DesktopGL\x86\libSDL2-2.0.so.0">
       <Link>x86\libSDL2-2.0.so.0</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-	<None Include="$(MonoGameInstallDirectory)\MonoGame\v3.0\Assemblies\DesktopGL\x64\libSDL2-2.0.so.0">
+    <None Include="$(MonoGameInstallDirectory)\MonoGame\v3.0\Assemblies\DesktopGL\x64\libSDL2-2.0.so.0">
       <Link>x64\libSDL2-2.0.so.0</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-	<None Include="$(MonoGameInstallDirectory)\MonoGame\v3.0\Assemblies\DesktopGL\x86\libopenal.so.1">
+    <None Include="$(MonoGameInstallDirectory)\MonoGame\v3.0\Assemblies\DesktopGL\x86\libopenal.so.1">
       <Link>x86\libopenal.so.1</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-	<None Include="$(MonoGameInstallDirectory)\MonoGame\v3.0\Assemblies\DesktopGL\x64\libopenal.so.1">
+    <None Include="$(MonoGameInstallDirectory)\MonoGame\v3.0\Assemblies\DesktopGL\x64\libopenal.so.1">
       <Link>x64\libopenal.so.1</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-	<None Include="$(MonoGameInstallDirectory)\MonoGame\v3.0\Assemblies\DesktopGL\libSDL2-2.0.0.dylib">
+    <None Include="$(MonoGameInstallDirectory)\MonoGame\v3.0\Assemblies\DesktopGL\libSDL2-2.0.0.dylib">
       <Link>libSDL2-2.0.0.dylib</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-	<None Include="$(MonoGameInstallDirectory)\MonoGame\v3.0\Assemblies\DesktopGL\libopenal.1.dylib">
+    <None Include="$(MonoGameInstallDirectory)\MonoGame\v3.0\Assemblies\DesktopGL\libopenal.1.dylib">
       <Link>libopenal.1.dylib</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-	<None Include="$(MonoGameInstallDirectory)\MonoGame\v3.0\Assemblies\DesktopGL\MonoGame.Framework.dll.config">
+    <None Include="$(MonoGameInstallDirectory)\MonoGame\v3.0\Assemblies\DesktopGL\MonoGame.Framework.dll.config">
       <Link>MonoGame.Framework.dll.config</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Include="..\..\JCR6\Drivers\Compression\lzma\readme.md">
+      <Link>Code Dependencies\JCR6\Drivers\Compression Algorithms\lzma\readme.md</Link>
+    </None>
+    <None Include="..\..\JCR6\Drivers\Compression\readme.md">
+      <Link>Code Dependencies\JCR6\Drivers\Compression Algorithms\readme.md</Link>
+    </None>
+    <None Include="..\..\JCR6\Drivers\Compression\zlib\readme.md">
+      <Link>Code Dependencies\JCR6\Drivers\Compression Algorithms\zlib\readme.md</Link>
+    </None>
     <None Include="app.manifest" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Content.Builder.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
