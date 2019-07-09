@@ -27,9 +27,13 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using TrickyUnits;
 
-namespace NALA
-{
+using Bubble;
+
+namespace NALA { 
+ 
+
     /// <summary>
     /// This is the main type for your game.
     /// </summary>
@@ -37,11 +41,13 @@ namespace NALA
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
+        public static NALACore Core { get; private set};
         
         public NALACore()
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
+            Core = this;
         }
 
         /// <summary>
@@ -52,8 +58,16 @@ namespace NALA
         /// </summary>
         protected override void Initialize()
         {
-            // TODO: Add your initialization logic here
+            #region base init! (generated code)
             base.Initialize();
+            #endregion
+
+            #region Tricky's Quick Monogame Graphics
+            TQMG.Init(graphics, GraphicsDevice, spriteBatch, SBubble.JCR);
+            #endregion
+
+
+            BubbleInit.LetsGo();
         }
 
         /// <summary>
