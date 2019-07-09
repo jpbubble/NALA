@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using TrickyUnits;
-using NALA;
+using Bubble;
 
-namespace Bubble {
+namespace NALA {
     static class BubbleInit {
         public static void LetsGo() {
 
@@ -32,6 +32,9 @@ namespace Bubble {
             // TODO: API for Swap Data Manager
             // TODO: API for RPGStat
             #endregion
+
+            // Start init script
+            FlowManager.StartInitFlow();
         }
     }
 }
