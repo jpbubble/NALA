@@ -36,6 +36,7 @@ namespace NALA {
             // TODO: API for TeddyBear
             // TODO: API for Swap Data Manager
             // TODO: API for RPGStat
+            RPG.JCRSTORAGE = "lzma";
             #endregion
 
             // Start init script
