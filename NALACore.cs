@@ -31,20 +31,18 @@ using TrickyUnits;
 
 using Bubble;
 
-namespace NALA { 
- 
+namespace NALA {
+
 
     /// <summary>
     /// This is the main type for your game.
     /// </summary>
-    public class NALACore : Game
-    {
+    public class NALACore : Game {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
         public static NALACore Core { get; private set};
-        
-        public NALACore()
-        {
+
+        public NALACore() {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
             Core = this;
@@ -56,8 +54,7 @@ namespace NALA {
         /// related content.  Calling base.Initialize will enumerate through any components
         /// and initialize them as well.
         /// </summary>
-        protected override void Initialize()
-        {
+        protected override void Initialize() {
             #region base init! (generated code)
             base.Initialize();
             #endregion
@@ -68,8 +65,7 @@ namespace NALA {
         /// LoadContent will be called once per game and is the place to load
         /// all of your content.
         /// </summary>
-        protected override void LoadContent()
-        {
+        protected override void LoadContent() {
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
@@ -79,15 +75,14 @@ namespace NALA {
 
 
             BubbleInit.LetsGo();
-            
+
         }
 
         /// <summary>
         /// UnloadContent will be called once per game and is the place to unload
         /// game-specific content.
         /// </summary>
-        protected override void UnloadContent()
-        {
+        protected override void UnloadContent() {
             // TODO: Unload any non ContentManager content here
         }
 
@@ -96,9 +91,13 @@ namespace NALA {
         /// checking for collisions, gathering input, and playing audio.
         /// </summary>
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
-        protected override void Update(GameTime gameTime)
-        {
-            if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
+        protected override void Update(GameTime gameTime) {
+
+
+            FlowManager.Update(gameTime);
+
+            // if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
+            if (FlowManager.TimeToDie)
                 Exit();
 
             // TODO: Add your update logic here
@@ -110,13 +109,16 @@ namespace NALA {
         /// This is called when the game should draw itself.
         /// </summary>
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
-        protected override void Draw(GameTime gameTime)
-        {
-            GraphicsDevice.Clear(Color.CornflowerBlue);
+        protected override void Draw(GameTime gameTime) {
+            GraphicsDevice.Clear(Color.Black);
+            spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, SamplerState.LinearWrap, null, null);
 
-            // TODO: Add your drawing code here
+            FlowManager.Draw(gameTime);
+
+            spriteBatch.End();
 
             base.Draw(gameTime);
+
         }
     }
 }
