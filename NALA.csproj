@@ -164,6 +164,9 @@
     <Compile Include="..\..\Kthura\Source\Class\KthuraDrawMonoGame.cs">
       <Link>Code Dependencies\Sub-Engines\Map\Kthura\KthuraDrawMonoGame.cs</Link>
     </Compile>
+    <Compile Include="..\..\Kthura\Source\KthuraBubble\KthuraBubble.cs">
+      <Link>Code Dependencies\Sub-Engines\Map\Kthura\KthuraBubble.cs</Link>
+    </Compile>
     <Compile Include="..\..\TQMG\TQMG.cs">
       <Link>Code Dependencies\Tricky%27s Units\TQMG.cs</Link>
     </Compile>
@@ -334,6 +337,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="..\Libraries\BubbleSave.nil">
       <Link>Code Dependencies\Bubble\MonoGame\NIL\BubbleSave.nil</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\..\Kthura\Source\KthuraBubble\KthuraBubble.nil">
+      <Link>Code Dependencies\Sub-Engines\Map\Kthura\KthuraBubble.nil</Link>
     </EmbeddedResource>
     <None Include="app.manifest" />
     <None Include="packages.config" />
