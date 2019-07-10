@@ -167,6 +167,18 @@
     <Compile Include="..\..\Kthura\Source\KthuraBubble\KthuraBubble.cs">
       <Link>Code Dependencies\Sub-Engines\Map\Kthura\KthuraBubble.cs</Link>
     </Compile>
+    <Compile Include="..\..\TeddyBear\TeddyBubble\TeddyBearBubble.cs">
+      <Link>Code Dependencies\Sub-Engines\Map\TeddyBear\TeddyBearBubble.cs</Link>
+    </Compile>
+    <Compile Include="..\..\TeddyBear\TeddyClass\TeddyCore.cs">
+      <Link>Code Dependencies\Sub-Engines\Map\TeddyBear\TeddyCore.cs</Link>
+    </Compile>
+    <Compile Include="..\..\TeddyBear\TeddyClass\TeddyDraw.cs">
+      <Link>Code Dependencies\Sub-Engines\Map\TeddyBear\TeddyDraw.cs</Link>
+    </Compile>
+    <Compile Include="..\..\TeddyBear\TeddyClass\TeddyDraw_MonoGame.cs">
+      <Link>Code Dependencies\Sub-Engines\Map\TeddyBear\TeddyDraw_MonoGame.cs</Link>
+    </Compile>
     <Compile Include="..\..\TQMG\TQMG.cs">
       <Link>Code Dependencies\Tricky%27s Units\TQMG.cs</Link>
     </Compile>
@@ -340,6 +352,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="..\..\Kthura\Source\KthuraBubble\KthuraBubble.nil">
       <Link>Code Dependencies\Sub-Engines\Map\Kthura\KthuraBubble.nil</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\..\TeddyBear\TeddyBubble\TeddyBearBubble.nil">
+      <Link>Code Dependencies\Sub-Engines\Map\TeddyBear\TeddyBearBubble.nil</Link>
     </EmbeddedResource>
     <None Include="app.manifest" />
     <None Include="packages.config" />
