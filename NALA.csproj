@@ -314,18 +314,24 @@
     <None Include="..\..\JCR6\Drivers\Compression\zlib\readme.md">
       <Link>Code Dependencies\JCR6\Drivers\Compression Algorithms\zlib\readme.md</Link>
     </None>
-    <None Include="..\MonoGame\src\dep\Bubble\NIL\Audio.nil">
+    <EmbeddedResource Include="..\MonoGame\src\dep\Bubble\NIL\Audio.nil">
       <Link>Code Dependencies\Bubble\MonoGame\NIL\Audio.nil</Link>
-    </None>
-    <None Include="..\MonoGame\src\dep\Bubble\NIL\Flow.lua">
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\MonoGame\src\dep\Bubble\NIL\Flow.lua">
       <Link>Code Dependencies\Bubble\MonoGame\NIL\Flow.lua</Link>
-    </None>
-    <None Include="..\MonoGame\src\dep\Bubble\NIL\Graphics.nil">
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\MonoGame\src\dep\Bubble\NIL\Graphics.nil">
       <Link>Code Dependencies\Bubble\MonoGame\NIL\Graphics.nil</Link>
-    </None>
-    <None Include="..\MonoGame\src\dep\Bubble\NIL\Input.lua">
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\MonoGame\src\dep\Bubble\NIL\Input.lua">
       <Link>Code Dependencies\Bubble\MonoGame\NIL\Input.lua</Link>
-    </None>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\NIL\NIL.lua">
+      <Link>Code Dependencies\Bubble\NIL\NIL.lua</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\Libraries\BubbleSuperGlobal.lua">
+      <Link>Code Dependencies\Bubble\MonoGame\NIL\BubbleSuperGlobal.lua</Link>
+    </EmbeddedResource>
     <None Include="app.manifest" />
     <None Include="packages.config" />
   </ItemGroup>
