@@ -332,6 +332,9 @@
     <EmbeddedResource Include="..\Libraries\BubbleSuperGlobal.lua">
       <Link>Code Dependencies\Bubble\MonoGame\NIL\BubbleSuperGlobal.lua</Link>
     </EmbeddedResource>
+    <EmbeddedResource Include="..\Libraries\BubbleSave.nil">
+      <Link>Code Dependencies\Bubble\MonoGame\NIL\BubbleSave.nil</Link>
+    </EmbeddedResource>
     <None Include="app.manifest" />
     <None Include="packages.config" />
   </ItemGroup>
