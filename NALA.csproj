@@ -329,7 +329,295 @@
     <None Include="app.manifest" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="..\MonoGame\src\dep\Embed\Death.png">
+      <Link>Asset Dependencies\Images\Death.png</Link>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="..\MonoGame\src\dep\Embed\SysFont\100.png">
+      <Link>Asset Dependencies\Fonts\SysFont\100.png</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\MonoGame\src\dep\Embed\SysFont\101.png">
+      <Link>Asset Dependencies\Fonts\SysFont\101.png</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\MonoGame\src\dep\Embed\SysFont\102.png">
+      <Link>Asset Dependencies\Fonts\SysFont\102.png</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\MonoGame\src\dep\Embed\SysFont\103.png">
+      <Link>Asset Dependencies\Fonts\SysFont\103.png</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\MonoGame\src\dep\Embed\SysFont\104.png">
+      <Link>Asset Dependencies\Fonts\SysFont\104.png</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\MonoGame\src\dep\Embed\SysFont\105.png">
+      <Link>Asset Dependencies\Fonts\SysFont\105.png</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\MonoGame\src\dep\Embed\SysFont\106.png">
+      <Link>Asset Dependencies\Fonts\SysFont\106.png</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\MonoGame\src\dep\Embed\SysFont\107.png">
+      <Link>Asset Dependencies\Fonts\SysFont\107.png</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\MonoGame\src\dep\Embed\SysFont\108.png">
+      <Link>Asset Dependencies\Fonts\SysFont\108.png</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\MonoGame\src\dep\Embed\SysFont\109.png">
+      <Link>Asset Dependencies\Fonts\SysFont\109.png</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\MonoGame\src\dep\Embed\SysFont\110.png">
+      <Link>Asset Dependencies\Fonts\SysFont\110.png</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\MonoGame\src\dep\Embed\SysFont\111.png">
+      <Link>Asset Dependencies\Fonts\SysFont\111.png</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\MonoGame\src\dep\Embed\SysFont\112.png">
+      <Link>Asset Dependencies\Fonts\SysFont\112.png</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\MonoGame\src\dep\Embed\SysFont\113.png">
+      <Link>Asset Dependencies\Fonts\SysFont\113.png</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\MonoGame\src\dep\Embed\SysFont\114.png">
+      <Link>Asset Dependencies\Fonts\SysFont\114.png</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\MonoGame\src\dep\Embed\SysFont\115.png">
+      <Link>Asset Dependencies\Fonts\SysFont\115.png</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\MonoGame\src\dep\Embed\SysFont\116.png">
+      <Link>Asset Dependencies\Fonts\SysFont\116.png</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\MonoGame\src\dep\Embed\SysFont\117.png">
+      <Link>Asset Dependencies\Fonts\SysFont\117.png</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\MonoGame\src\dep\Embed\SysFont\118.png">
+      <Link>Asset Dependencies\Fonts\SysFont\118.png</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\MonoGame\src\dep\Embed\SysFont\119.png">
+      <Link>Asset Dependencies\Fonts\SysFont\119.png</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\MonoGame\src\dep\Embed\SysFont\120.png">
+      <Link>Asset Dependencies\Fonts\SysFont\120.png</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\MonoGame\src\dep\Embed\SysFont\121.png">
+      <Link>Asset Dependencies\Fonts\SysFont\121.png</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\MonoGame\src\dep\Embed\SysFont\122.png">
+      <Link>Asset Dependencies\Fonts\SysFont\122.png</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\MonoGame\src\dep\Embed\SysFont\123.png">
+      <Link>Asset Dependencies\Fonts\SysFont\123.png</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\MonoGame\src\dep\Embed\SysFont\124.png">
+      <Link>Asset Dependencies\Fonts\SysFont\124.png</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\MonoGame\src\dep\Embed\SysFont\125.png">
+      <Link>Asset Dependencies\Fonts\SysFont\125.png</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\MonoGame\src\dep\Embed\SysFont\126.png">
+      <Link>Asset Dependencies\Fonts\SysFont\126.png</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\MonoGame\src\dep\Embed\SysFont\33.png">
+      <Link>Asset Dependencies\Fonts\SysFont\33.png</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\MonoGame\src\dep\Embed\SysFont\34.png">
+      <Link>Asset Dependencies\Fonts\SysFont\34.png</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\MonoGame\src\dep\Embed\SysFont\35.png">
+      <Link>Asset Dependencies\Fonts\SysFont\35.png</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\MonoGame\src\dep\Embed\SysFont\36.png">
+      <Link>Asset Dependencies\Fonts\SysFont\36.png</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\MonoGame\src\dep\Embed\SysFont\37.png">
+      <Link>Asset Dependencies\Fonts\SysFont\37.png</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\MonoGame\src\dep\Embed\SysFont\38.png">
+      <Link>Asset Dependencies\Fonts\SysFont\38.png</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\MonoGame\src\dep\Embed\SysFont\39.png">
+      <Link>Asset Dependencies\Fonts\SysFont\39.png</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\MonoGame\src\dep\Embed\SysFont\40.png">
+      <Link>Asset Dependencies\Fonts\SysFont\40.png</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\MonoGame\src\dep\Embed\SysFont\41.png">
+      <Link>Asset Dependencies\Fonts\SysFont\41.png</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\MonoGame\src\dep\Embed\SysFont\42.png">
+      <Link>Asset Dependencies\Fonts\SysFont\42.png</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\MonoGame\src\dep\Embed\SysFont\43.png">
+      <Link>Asset Dependencies\Fonts\SysFont\43.png</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\MonoGame\src\dep\Embed\SysFont\44.png">
+      <Link>Asset Dependencies\Fonts\SysFont\44.png</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\MonoGame\src\dep\Embed\SysFont\45.png">
+      <Link>Asset Dependencies\Fonts\SysFont\45.png</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\MonoGame\src\dep\Embed\SysFont\46.png">
+      <Link>Asset Dependencies\Fonts\SysFont\46.png</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\MonoGame\src\dep\Embed\SysFont\47.png">
+      <Link>Asset Dependencies\Fonts\SysFont\47.png</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\MonoGame\src\dep\Embed\SysFont\48.png">
+      <Link>Asset Dependencies\Fonts\SysFont\48.png</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\MonoGame\src\dep\Embed\SysFont\49.png">
+      <Link>Asset Dependencies\Fonts\SysFont\49.png</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\MonoGame\src\dep\Embed\SysFont\50.png">
+      <Link>Asset Dependencies\Fonts\SysFont\50.png</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\MonoGame\src\dep\Embed\SysFont\51.png">
+      <Link>Asset Dependencies\Fonts\SysFont\51.png</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\MonoGame\src\dep\Embed\SysFont\52.png">
+      <Link>Asset Dependencies\Fonts\SysFont\52.png</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\MonoGame\src\dep\Embed\SysFont\53.png">
+      <Link>Asset Dependencies\Fonts\SysFont\53.png</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\MonoGame\src\dep\Embed\SysFont\54.png">
+      <Link>Asset Dependencies\Fonts\SysFont\54.png</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\MonoGame\src\dep\Embed\SysFont\55.png">
+      <Link>Asset Dependencies\Fonts\SysFont\55.png</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\MonoGame\src\dep\Embed\SysFont\56.png">
+      <Link>Asset Dependencies\Fonts\SysFont\56.png</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\MonoGame\src\dep\Embed\SysFont\57.png">
+      <Link>Asset Dependencies\Fonts\SysFont\57.png</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\MonoGame\src\dep\Embed\SysFont\58.png">
+      <Link>Asset Dependencies\Fonts\SysFont\58.png</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\MonoGame\src\dep\Embed\SysFont\59.png">
+      <Link>Asset Dependencies\Fonts\SysFont\59.png</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\MonoGame\src\dep\Embed\SysFont\60.png">
+      <Link>Asset Dependencies\Fonts\SysFont\60.png</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\MonoGame\src\dep\Embed\SysFont\61.png">
+      <Link>Asset Dependencies\Fonts\SysFont\61.png</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\MonoGame\src\dep\Embed\SysFont\62.png">
+      <Link>Asset Dependencies\Fonts\SysFont\62.png</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\MonoGame\src\dep\Embed\SysFont\63.png">
+      <Link>Asset Dependencies\Fonts\SysFont\63.png</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\MonoGame\src\dep\Embed\SysFont\64.png">
+      <Link>Asset Dependencies\Fonts\SysFont\64.png</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\MonoGame\src\dep\Embed\SysFont\65.png">
+      <Link>Asset Dependencies\Fonts\SysFont\65.png</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\MonoGame\src\dep\Embed\SysFont\66.png">
+      <Link>Asset Dependencies\Fonts\SysFont\66.png</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\MonoGame\src\dep\Embed\SysFont\67.png">
+      <Link>Asset Dependencies\Fonts\SysFont\67.png</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\MonoGame\src\dep\Embed\SysFont\68.png">
+      <Link>Asset Dependencies\Fonts\SysFont\68.png</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\MonoGame\src\dep\Embed\SysFont\69.png">
+      <Link>Asset Dependencies\Fonts\SysFont\69.png</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\MonoGame\src\dep\Embed\SysFont\70.png">
+      <Link>Asset Dependencies\Fonts\SysFont\70.png</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\MonoGame\src\dep\Embed\SysFont\71.png">
+      <Link>Asset Dependencies\Fonts\SysFont\71.png</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\MonoGame\src\dep\Embed\SysFont\72.png">
+      <Link>Asset Dependencies\Fonts\SysFont\72.png</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\MonoGame\src\dep\Embed\SysFont\73.png">
+      <Link>Asset Dependencies\Fonts\SysFont\73.png</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\MonoGame\src\dep\Embed\SysFont\74.png">
+      <Link>Asset Dependencies\Fonts\SysFont\74.png</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\MonoGame\src\dep\Embed\SysFont\75.png">
+      <Link>Asset Dependencies\Fonts\SysFont\75.png</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\MonoGame\src\dep\Embed\SysFont\76.png">
+      <Link>Asset Dependencies\Fonts\SysFont\76.png</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\MonoGame\src\dep\Embed\SysFont\77.png">
+      <Link>Asset Dependencies\Fonts\SysFont\77.png</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\MonoGame\src\dep\Embed\SysFont\78.png">
+      <Link>Asset Dependencies\Fonts\SysFont\78.png</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\MonoGame\src\dep\Embed\SysFont\79.png">
+      <Link>Asset Dependencies\Fonts\SysFont\79.png</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\MonoGame\src\dep\Embed\SysFont\80.png">
+      <Link>Asset Dependencies\Fonts\SysFont\80.png</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\MonoGame\src\dep\Embed\SysFont\81.png">
+      <Link>Asset Dependencies\Fonts\SysFont\81.png</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\MonoGame\src\dep\Embed\SysFont\82.png">
+      <Link>Asset Dependencies\Fonts\SysFont\82.png</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\MonoGame\src\dep\Embed\SysFont\83.png">
+      <Link>Asset Dependencies\Fonts\SysFont\83.png</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\MonoGame\src\dep\Embed\SysFont\84.png">
+      <Link>Asset Dependencies\Fonts\SysFont\84.png</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\MonoGame\src\dep\Embed\SysFont\85.png">
+      <Link>Asset Dependencies\Fonts\SysFont\85.png</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\MonoGame\src\dep\Embed\SysFont\86.png">
+      <Link>Asset Dependencies\Fonts\SysFont\86.png</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\MonoGame\src\dep\Embed\SysFont\87.png">
+      <Link>Asset Dependencies\Fonts\SysFont\87.png</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\MonoGame\src\dep\Embed\SysFont\88.png">
+      <Link>Asset Dependencies\Fonts\SysFont\88.png</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\MonoGame\src\dep\Embed\SysFont\89.png">
+      <Link>Asset Dependencies\Fonts\SysFont\89.png</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\MonoGame\src\dep\Embed\SysFont\90.png">
+      <Link>Asset Dependencies\Fonts\SysFont\90.png</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\MonoGame\src\dep\Embed\SysFont\91.png">
+      <Link>Asset Dependencies\Fonts\SysFont\91.png</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\MonoGame\src\dep\Embed\SysFont\92.png">
+      <Link>Asset Dependencies\Fonts\SysFont\92.png</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\MonoGame\src\dep\Embed\SysFont\93.png">
+      <Link>Asset Dependencies\Fonts\SysFont\93.png</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\MonoGame\src\dep\Embed\SysFont\94.png">
+      <Link>Asset Dependencies\Fonts\SysFont\94.png</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\MonoGame\src\dep\Embed\SysFont\95.png">
+      <Link>Asset Dependencies\Fonts\SysFont\95.png</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\MonoGame\src\dep\Embed\SysFont\96.png">
+      <Link>Asset Dependencies\Fonts\SysFont\96.png</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\MonoGame\src\dep\Embed\SysFont\97.png">
+      <Link>Asset Dependencies\Fonts\SysFont\97.png</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\MonoGame\src\dep\Embed\SysFont\98.png">
+      <Link>Asset Dependencies\Fonts\SysFont\98.png</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\MonoGame\src\dep\Embed\SysFont\99.png">
+      <Link>Asset Dependencies\Fonts\SysFont\99.png</Link>
+    </EmbeddedResource>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Content.Builder.targets" />
   <Import Project="packages\KeraLua.1.0.14\build\net45\KeraLua.targets" Condition="Exists('packages\KeraLua.1.0.14\build\net45\KeraLua.targets')" />

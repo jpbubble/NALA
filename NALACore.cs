@@ -47,6 +47,7 @@ namespace NALA {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
             Core = this;
+            UseJCR6.BubbleInit.Init();
         }
 
         /// <summary>
