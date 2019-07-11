@@ -54,6 +54,9 @@ namespace NALA {
             #endregion
 
             #region The stuff needed for NALA in particular
+            // Own APIs for NIL and Lua
+            SBubble.AddInit(MapScriptAPI.API_Init);
+
             // Kthura Init
             Kthura.SetDefaultTextureJCR(SBubble.JCR); // Textures are all in the same project
             KthuraDraw.DrawDriver = new KthuraDrawMonoGame(); // Tell Kthura to use the MonoGame Driver to display the map
