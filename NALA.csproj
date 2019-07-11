@@ -253,6 +253,7 @@
     </Compile>
     <Compile Include="Code Dependencies\Bubble\BubbleInit.cs" />
     <Compile Include="Code Dependencies\JCR6\BubbleInit.cs" />
+    <Compile Include="Code Dependencies\NALA\MapScriptAPI.cs" />
     <Compile Include="NALACore.cs" />
     <Compile Include="VoidMain.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

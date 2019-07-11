@@ -1,0 +1,16 @@
+table meta
+
+meta.__newindex=void(tab, key, value)
+   // TODO: Make MapScript define its inner variables.
+end
+
+meta.__index=var(tab,string key)
+   if key=="getvar"
+      // TODO: Make MapScript retreive its inner variables
+   else
+      // TODO: Make MapScript call its own methods/functions
+   end
+end
+
+global table MapScript
+setmetatable(MapScript,meta)
