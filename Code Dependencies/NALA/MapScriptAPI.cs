@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NALA.Code_Dependencies.NALA {
+namespace NALA {
     class MapScriptAPI {
         
     }
