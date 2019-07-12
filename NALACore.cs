@@ -49,6 +49,7 @@ namespace NALA {
             Content.RootDirectory = "Content";
             Core = this;
             UseJCR6.BubbleInit.Init();
+            Dirry.InitAltDrives();
         }
 
         /// <summary>
