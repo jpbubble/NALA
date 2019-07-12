@@ -37,8 +37,7 @@ namespace NALA {
     static class BubbleInit {
         public static void LetsGo() {
 
-            #region Install Error Manager, and the global engine!
-            SBubble.Init("NALA", Error.GoError);
+            #region Install Error Manager, and the global engine!            
             NALACore.Core.Window.Title = SBubble.Title;
             #endregion
 

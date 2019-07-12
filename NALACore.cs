@@ -73,12 +73,14 @@ namespace NALA {
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
+
             #region Tricky's Quick Monogame Graphics
+            if (SBubble.JCR == null) System.Diagnostics.Debug.WriteLine("EEP! JCR resource is null! But how?");
             TQMG.Init(graphics, GraphicsDevice, spriteBatch, SBubble.JCR);
             #endregion
 
-
             BubbleInit.LetsGo();
+
 
         }
 

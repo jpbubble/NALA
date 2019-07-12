@@ -30,6 +30,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Bubble;
 
 // Loads and initizes the JCR6 classes needed for NALA
 // Please note that JCR6 itself and the drivers for lzma and zlib compression need to be properly loaded
@@ -43,6 +44,7 @@ namespace UseJCR6 {
             JCR6_zlib.Init();
             new JCR6_RealDir();
             new JCR_JCR5();
+            SBubble.Init("NALA", Error.GoError);
         }
     }
 }
