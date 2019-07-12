@@ -358,6 +358,7 @@
       <Link>Code Dependencies\Sub-Engines\Map\TeddyBear\TeddyBearBubble.nil</Link>
     </EmbeddedResource>
     <None Include="app.manifest" />
+    <EmbeddedResource Include="Code Dependencies\NALA\MapScriptAPI.nil" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
