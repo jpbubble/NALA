@@ -18,6 +18,7 @@
 // 3. This notice may not be removed or altered from any source distribution.
 // End License Information
 
+
 table meta
 
 meta.__newindex=void(tab, key, value)
@@ -34,4 +35,5 @@ end
 
 global table MapScript
 setmetatable(MapScript,meta)
+
 

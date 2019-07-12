@@ -24,6 +24,7 @@
 // Version: 19.07.12
 // EndLic
 
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -46,4 +47,5 @@ namespace NALA {
 
     }
 }
+
 
