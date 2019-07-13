@@ -50,6 +50,8 @@ namespace NALA {
             Core = this;
             UseJCR6.BubbleInit.Init();
             Dirry.InitAltDrives();
+            //graphics.IsFullScreen = true; 
+            //graphics.ApplyChanges();
         }
 
         /// <summary>
@@ -117,8 +119,8 @@ namespace NALA {
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Draw(GameTime gameTime) {
             GraphicsDevice.Clear(Color.Black);
-            spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, SamplerState.LinearWrap, null, null);
-
+            spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.NonPremultiplied, SamplerState.LinearWrap, DepthStencilState.Default, null);
+            
             FlowManager.Draw(gameTime);
 
             spriteBatch.End();
