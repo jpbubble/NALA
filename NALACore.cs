@@ -50,6 +50,7 @@ namespace NALA {
             Core = this;
             UseJCR6.BubbleInit.Init();
             Dirry.InitAltDrives();
+            graphics.HardwareModeSwitch = false;
             graphics.IsFullScreen = true; 
             graphics.ApplyChanges();
         }
