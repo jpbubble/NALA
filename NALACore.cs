@@ -50,9 +50,14 @@ namespace NALA {
             Core = this;
             UseJCR6.BubbleInit.Init();
             Dirry.InitAltDrives();
+#if !DEBUG
             graphics.HardwareModeSwitch = false;
             graphics.IsFullScreen = true; 
             graphics.ApplyChanges();
+#else
+            graphics.PreferredBackBufferWidth = 1200;
+            graphics.PreferredBackBufferHeight = 1000;
+#endif
         }
 
         /// <summary>
@@ -62,9 +67,9 @@ namespace NALA {
         /// and initialize them as well.
         /// </summary>
         protected override void Initialize() {
-            #region base init! (generated code)
+#region base init! (generated code)
             base.Initialize();
-            #endregion
+#endregion
 
         }
 
@@ -77,10 +82,10 @@ namespace NALA {
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
 
-            #region Tricky's Quick Monogame Graphics
+#region Tricky's Quick Monogame Graphics
             if (SBubble.JCR == null) System.Diagnostics.Debug.WriteLine("EEP! JCR resource is null! But how?");
             TQMG.Init(graphics, GraphicsDevice, spriteBatch, SBubble.JCR);
-            #endregion
+#endregion
 
             BubbleInit.LetsGo();
 
