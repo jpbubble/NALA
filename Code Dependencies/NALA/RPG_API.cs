@@ -38,11 +38,10 @@ namespace NALA.Code_Dependencies.NALA {
         public int PartyMax {
             set => RPG.RPGParty = new string[value];
             get => RPG.RPGParty.Length;
-
         }
         #endregion
 
-        #region Character creation and destruction
+        #region Character creation, management and destruction
         public void CreateChar(string tag) { new RPGCharacter(tag); }
         public bool CharExists(string tag) => RPG.RPGChars.Contains(tag);
         #endregion
@@ -53,28 +52,70 @@ namespace NALA.Code_Dependencies.NALA {
             return RPG.GrabChar(chrtag).HasStat(stattag);
         }
 
-        public int DStat(string tag,string stat,int value) {
-            try {
-                var ch = RPG.GrabChar(tag); if (ch == null) throw new Exception($"No character named {tag}");
-                ch.CreateStat(stat, false);
-                var st = ch.Stat(stat);
-                st.Value = value;
-                return st.Value;
-            } catch (Exception noway) {
-                SBubble.MyError("RPG Stat Error", noway.Message, SBubble.TraceLua(statename));
-            return value;
+        public void CreateStat(string chrtag,string statag,bool overwrite) {
+            if (!CharExists(chrtag)) {
+                SBubble.MyError($"CreateStat(\"{chrtag}\",\"{statag}\"):", "Character doesn't exist!", SBubble.TraceLua(statename));
+                return;
+            }
+            var ch = RPG.GrabChar(chrtag);
+            ch.CreateStat(statag, overwrite);
+        }
+
+        public string StatScript(string chrtag,string statag, string script) {
+            var ch = RPG.GrabChar(chrtag); if (ch==null) SBubble.MyError($"Script Stat(\"{chrtag}\",\"{statag}\"):", "Character doesn't exist!", SBubble.TraceLua(statename));
+            var st = ch.Stat(statag); if (st==null) SBubble.MyError($"Script Stat(\"{chrtag}\",\"{statag}\"):", "Stat doesn't exist!", SBubble.TraceLua(statename));
+            if (script == "**DONOTCHANGE**") return st.ScriptFile; // Pleaase note that in NALA I'm gonna go farther than just script files, as they sometimes make things more complicated than needed
+            st.ScriptFile = script;
+            return script;
+        }
+
+        public int GetStatValue(string chrtag,string stattag) {
+            var ch = RPG.GrabChar(chrtag); if (ch == null) SBubble.MyError($"GetStatValue(\"{chrtag}\",\"{stattag}\"):", "Character doesn't exist!", SBubble.TraceLua(statename));
+            var st = ch.Stat(stattag); if (st == null) SBubble.MyError($"GetStatValue(\"{chrtag}\",\"{stattag}\"):", "Stat doesn't exist!", SBubble.TraceLua(statename));
+            if (st.ScriptFile == "") return st.Value;
+            var DubbelePunt = st.ScriptFile.IndexOf(':');
+            string Kind, Formula;
+            if (DubbelePunt >= 0) {
+                Kind = st.ScriptFile.Substring(0, DubbelePunt).ToUpper();
+                Formula = st.ScriptFile.Substring(DubbelePunt + 1);
+            } else {
+                Kind = "FILE";
+                Formula = st.ScriptFile;
+            }
+            switch (Kind) {
+                case "FILE":
+                    // TODO: Implement FILE: prefix for GetStatValue scripting!
+                    SBubble.MyError("Too early version error", "FILE: not yet supported in NALA", "");
+                    return 0;
+                case "SUM":
+                case "AVG": {
+                        var Stats = Formula.Split(',');
+                        var Total = 0;
+                        foreach (string calcStat in Stats) Total = +GetStatValue(chrtag, calcStat);
+                        switch (Kind) {
+                            case "SUM": st.Value = Total; break;
+                            case "AVG": st.Value = (int)Math.Floor((decimal)Total / (decimal)Stats.Length); break;
+                        }
+                    }
+                    return st.Value; 
+                default:
+                    SBubble.MyError("Stat Script Error", $"Script kind {Kind} unknown", $"Char: {chrtag}; Stat {stattag}");
+                    return 0;
             }
         }
-        public int GStat(string tag, string stat) {
-            try {
-                var ch = RPG.GrabChar(tag); if (ch == null) throw new Exception($"No character named {tag}");                
-                var st = ch.Stat(stat); if (st == null) throw new Exception($"Character {tag} doesn't have the stat {stat}");
-                return st.Value;
-            } catch (Exception noway) {
-                SBubble.MyError("RPG Stat Error", noway.Message, SBubble.TraceLua(statename));
-                return 0;
-            }            
+
+        public void SetStatValue(string chrtag, string stattag, int value) {
+            var ch = RPG.GrabChar(chrtag); if (ch == null) SBubble.MyError($"GetStatValue(\"{chrtag}\",\"{stattag}\"):", "Character doesn't exist!", SBubble.TraceLua(statename));
+            var st = ch.Stat(stattag); if (st == null) SBubble.MyError($"GetStatValue(\"{chrtag}\",\"{stattag}\"):", "Stat doesn't exist!", SBubble.TraceLua(statename));
+            if (st.ScriptFile == "") {
+                SBubble.MyError($"SetStatValue(\"{chrtag}\", \"{stattag}\", {value});", "Scripted stats cannot have their value manually reassinged!", SBubble.TraceLua(statename));
+                return ;
+            }
+            st.Value = value;
+
         }
+
+
         #endregion
     }
 

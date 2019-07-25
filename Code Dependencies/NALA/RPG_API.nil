@@ -36,30 +36,84 @@ setmetatable(RPGParty,{
 
 class RPGStat
 	readonly static table TagMap
+	readonly string ChTag
+	readonly string StTag
 	
+	get string Tag
+		return string.format("%s::%s",ChTag,StTag)
+	end
 	
+	static bool Static_Has(string ch, string stat)
+		string t 
+		t = string.format("%s::%s",ChTag,StTag)
+		return self.TagMap[t]!=nil
+	end
+	
+	static var GetStat(string ch,string stat)
+		t = string.format("%s::%s",ChTag,StTag)
+		return self.TagMap[t]
+	end
+	
+	set string Script
+		NALA_RPG:StatScript(self.ChTag,self.StTag,value)
+	end
+	
+	get string Script
+		return NALA_RPG:StatScript(self.ChTag,self.StTag,"**DONOTCHANGE**")
+	end
+	
+	get number Value
+		return NALA_RPG:GetStatValue(self.ChTag,self.StTag)
+	end
+	
+	set number Value
+		return NALA_RPG:SetStatValue(self.ChTag,self.StTag,value)
+	end
+	
+	void CONSTRUCTOR(string char,string stat)
+		assert(NALA_RPG:StatExists(char,stat) ,"You cannot use 'new RPGStat()' directly!")
+		self.ChTag = char
+		self.StTag = stat
+		self.TagMap[Tag] = self
+	end
 end
 
 
 class RPGCharacter
 
-	readonly string Tag
+	readonly string ChTag
 	readonly static table TagMap
 	
-	void CONSTRUCTOR(chTag)
-		assert(NALA_RPG:CharExists[chTag],"You cannot use 'new RPGCharacter()' directly!")
-		self.Tag = chTag
+	void CONSTRUCTOR(string charTag)
+		assert(NALA_RPG:CharExists(chTag),"You cannot use 'new RPGCharacter()' directly!")
+		self.ChTag = chTag
 		self.TagMap[chTag] = self
 	end
 	
 	static var GetChar(Tag)
-		assert(TagMap[Tag] and NALA_RPG:CharExists[Tag],string.format("Requested character '%s' does not exist",Tag))
-		return TagMap[Tag]
+		assert(self.TagMap[Tag] and NALA_RPG:CharExists[Tag],string.format("Requested character '%s' does not exist",Tag))
+		return self.TagMap[Tag]
 	end
+	
+	var Stat(string Stat, mustexist)
+		if mustexist 
+			assert(NALA_RPG:StatExists(self.ChTag,Stat),string.format("Character %s doesn't have stat %s",Char,Stat))
+		elseif not NALA_RPG:StatExists(self.ChTag,Stat)
+			NALE_RPG:CreateStat(self.ChTag,Stat,true)
+		end
+		if not RPGStat.Static_Has(self.ChTag,Stat)
+			return new RPGStat(self.ChTag,Stat)
+		end
+		return RPGStat.GetStat(self.ChTag,Stat)
+	end
+	
+	
 end
 
 
 group RPG
+
+	delegate GetChar
 
 	get table Party
 		return RPGParty
@@ -72,6 +126,10 @@ group RPG
 	
 	var Char(tag)
 		return RPGCharacter.GetChar(tag)
+	end
+	
+	void CONSTRUCTOR()
+		GetChar = RPGCharacter.GetChar
 	end
 
 end
