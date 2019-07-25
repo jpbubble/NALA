@@ -88,6 +88,39 @@ class RPGPoints
 		return string.format("%s::%s",self.ChTag,self.PtTag)
 	end
 	
+	get number Maximum
+		return NALA_RPG:GetMaxPoints(self.ChTag,self.PtTag,false)
+	end
+	
+	set number Maximum
+		NALA_RPG:SetMaxPoints(self.ChTag,self.PtTag,value,false)
+	end
+	
+	get number Minimum
+		return NALA_RPG:GetMinPoints(self.ChTag,self.PtTag,false)
+	end
+	
+	set number Minimum
+		NALA_RPG:SetMinPoints(self.ChTag,self.PtTag,value,false)
+	end
+	
+	set number Have
+		NALA_RPG:SetHavePoints(self.ChTag,self.PtTag,value,false)
+	end
+	
+	get number Have
+		return NALA_RPG:GetHavePoints(self.ChTag,self.PtTag,false)
+	end
+	
+	
+	void CONSTRUCTOR(string Char,string Pnt, bool CreateIfNonExistent)
+		NALA_RPG:ChkPoints(Char,Pnt,CreateIfNonExistent)
+		self.ChTag = Char
+		self.ptTag = Pnt
+		self.TagMap[Tag] = self
+		//-- Please note, when this goes wrong, the program will crash out anyway, so the class creation doesn't hurt at all!
+	end
+	
 end
 
 
@@ -120,7 +153,12 @@ class RPGCharacter
 	end
 	
 	var Points(string Pnt, CreateIfNonExistent)
-		
+		var tag
+		tag = string.format("%s::%s",self.ChTag,Pnt)
+		if not RPGPoints.TagMap[tag]
+			new RPGPoints(Pnt,CreateIfNonExistent==true)
+		end
+		return RPGPoints.TagMap[tag]
 	end
 end
 
@@ -132,6 +170,7 @@ group RPG
 	get table Party
 		return RPGParty
 	end
+	
 
 	var CreateChar(string tag)
 		NALA_RPG:CreateCharacter(tag)
