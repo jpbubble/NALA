@@ -116,26 +116,26 @@ namespace NALA.Code_Dependencies.NALA {
         #endregion
 
         #region Points
-        void ChkPoints(string chrtag, string pnttag, bool createifneeded) {
+        public void ChkPoints(string chrtag, string pnttag, bool createifneeded) {
             var ch = RPG.GrabChar(chrtag); if (ch == null) SBubble.MyError($"ChkPoints(\"{chrtag}\",\"{pnttag}\"):", "Character doesn't exist!", SBubble.TraceLua(statename));
             ch.Point(pnttag, createifneeded);
         }
 
-        int GetMaxPoints(string chrtag, string pnttag, bool createifneeded) {
+        public int GetMaxPoints(string chrtag, string pnttag, bool createifneeded) {
             var ch = RPG.GrabChar(chrtag); if (ch == null) { SBubble.MyError($"ChkPoints(\"{chrtag}\",\"{pnttag}\"):", "Character doesn't exist!", SBubble.TraceLua(statename)); return 0; }
             var pt = ch.Point(pnttag, createifneeded); if (pt == null) { SBubble.MyError($"ChkPoints(\"{chrtag}\",\"{pnttag}\"):", "Points record doesn't exist!", SBubble.TraceLua(statename)); return 0; }
             if (pt.MaxCopy != "") pt.Maximum = GetStatValue(chrtag, pt.MaxCopy);
             return pt.Maximum;
         }
 
-        void SetMaxPoints(string chrtag, string pnttag, int value, bool createifneeded) {
+        public void SetMaxPoints(string chrtag, string pnttag, int value, bool createifneeded) {
             var ch = RPG.GrabChar(chrtag); if (ch == null) { SBubble.MyError($"ChkPoints(\"{chrtag}\",\"{pnttag}\"):", "Character doesn't exist!", SBubble.TraceLua(statename)); return; }
             var pt = ch.Point(pnttag, createifneeded); if (pt == null) { SBubble.MyError($"ChkPoints(\"{chrtag}\",\"{pnttag}\"):", "Points record doesn't exist!", SBubble.TraceLua(statename)); return; }
             if (pt.MaxCopy != "") {
                 SBubble.MyError($"ChkPoints(\"{chrtag}\",\"{pnttag}\"):", "MaxCopy based points cannot have their maximum value manually altered", SBubble.TraceLua(statename));
                 return;
             }
-            if (pt.Minimum>pt.Maximum) {
+            if (pt.Minimum > pt.Maximum) {
                 SBubble.MyError($"ChkPoints(\"{chrtag}\",\"{pnttag}\"):", "Minimum higher than maximum", SBubble.TraceLua(statename));
                 return;
             }
@@ -143,13 +143,13 @@ namespace NALA.Code_Dependencies.NALA {
         }
 
 
-        int GetMinPoints(string chrtag, string pnttag, bool createifneeded) {
+        public int GetMinPoints(string chrtag, string pnttag, bool createifneeded) {
             var ch = RPG.GrabChar(chrtag); if (ch == null) { SBubble.MyError($"ChkPoints(\"{chrtag}\",\"{pnttag}\"):", "Character doesn't exist!", SBubble.TraceLua(statename)); return 0; }
-            var pt = ch.Point(pnttag, createifneeded); if (pt == null) { SBubble.MyError($"ChkPoints(\"{chrtag}\",\"{pnttag}\"):", "Points record doesn't exist!", SBubble.TraceLua(statename)); return 0; }            
+            var pt = ch.Point(pnttag, createifneeded); if (pt == null) { SBubble.MyError($"ChkPoints(\"{chrtag}\",\"{pnttag}\"):", "Points record doesn't exist!", SBubble.TraceLua(statename)); return 0; }
             return pt.Minimum;
         }
 
-        void SetMinPoints(string chrtag, string pnttag, int value, bool createifneeded) {
+        public void SetMinPoints(string chrtag, string pnttag, int value, bool createifneeded) {
             var ch = RPG.GrabChar(chrtag); if (ch == null) { SBubble.MyError($"ChkPoints(\"{chrtag}\",\"{pnttag}\"):", "Character doesn't exist!", SBubble.TraceLua(statename)); return; }
             var pt = ch.Point(pnttag, createifneeded); if (pt == null) { SBubble.MyError($"ChkPoints(\"{chrtag}\",\"{pnttag}\"):", "Points record doesn't exist!", SBubble.TraceLua(statename)); return; }
             if (pt.Minimum > pt.Maximum) {
@@ -160,7 +160,7 @@ namespace NALA.Code_Dependencies.NALA {
         }
 
 
-        int GetHavePoints(string chrtag, string pnttag, bool createifneeded) {
+        public int GetHavePoints(string chrtag, string pnttag, bool createifneeded) {
             var ch = RPG.GrabChar(chrtag); if (ch == null) { SBubble.MyError($"ChkPoints(\"{chrtag}\",\"{pnttag}\"):", "Character doesn't exist!", SBubble.TraceLua(statename)); return 0; }
             var pt = ch.Point(pnttag, createifneeded); if (pt == null) { SBubble.MyError($"ChkPoints(\"{chrtag}\",\"{pnttag}\"):", "Points record doesn't exist!", SBubble.TraceLua(statename)); return 0; }
             if (pt.Have < pt.Minimum) pt.Have = pt.Minimum;
@@ -168,7 +168,7 @@ namespace NALA.Code_Dependencies.NALA {
             return pt.Have;
         }
 
-        void SetHavePoints(string chrtag, string pnttag, int value, bool createifneeded) {
+        public void SetHavePoints(string chrtag, string pnttag, int value, bool createifneeded) {
             var ch = RPG.GrabChar(chrtag); if (ch == null) { SBubble.MyError($"ChkPoints(\"{chrtag}\",\"{pnttag}\"):", "Character doesn't exist!", SBubble.TraceLua(statename)); return; }
             var pt = ch.Point(pnttag, createifneeded); if (pt == null) { SBubble.MyError($"ChkPoints(\"{chrtag}\",\"{pnttag}\"):", "Points record doesn't exist!", SBubble.TraceLua(statename)); return; }
             pt.Have = value;
@@ -176,21 +176,33 @@ namespace NALA.Code_Dependencies.NALA {
             if (pt.Have > pt.Maximum) pt.Have = pt.Maximum;
         }
 
-        string GetMaxCopyPoints(string chrtag, string pnttag, bool createifneeded) {
+        public string GetMaxCopyPoints(string chrtag, string pnttag, bool createifneeded) {
             var ch = RPG.GrabChar(chrtag); if (ch == null) { SBubble.MyError($"ChkPoints(\"{chrtag}\",\"{pnttag}\"):", "Character doesn't exist!", SBubble.TraceLua(statename)); return 0; }
             var pt = ch.Point(pnttag, createifneeded); if (pt == null) { SBubble.MyError($"ChkPoints(\"{chrtag}\",\"{pnttag}\"):", "Points record doesn't exist!", SBubble.TraceLua(statename)); return 0; }
             return pt.MaxCopy;
         }
 
-        void SetMaxCopyPoints(string chrtag, string pnttag, string value, bool createifneeded) {
+        public void SetMaxCopyPoints(string chrtag, string pnttag, string value, bool createifneeded) {
             var ch = RPG.GrabChar(chrtag); if (ch == null) { SBubble.MyError($"ChkPoints(\"{chrtag}\",\"{pnttag}\"):", "Character doesn't exist!", SBubble.TraceLua(statename)); return; }
             var pt = ch.Point(pnttag, createifneeded); if (pt == null) { SBubble.MyError($"ChkPoints(\"{chrtag}\",\"{pnttag}\"):", "Points record doesn't exist!", SBubble.TraceLua(statename)); return; }
             pt.MaxCopy = value;
             pt.Maximum = GetStatValue(chrtag, pt.MaxCopy);
         }
 
+        #endregion
+        #region Name
+        public void SetName(string chrtag, string Name) {
+            var ch = RPG.GrabChar(chrtag); if (ch == null) { SBubble.MyError($"Name(\"{chrtag}\",\"{name}\"):", "Character doesn't exist!", SBubble.TraceLua(statename)); return; }
+            ch.Name = Name;
+        }
+
+        public string GetName(string chrtag) {
+            var ch = RPG.GrabChar(chrtag); if (ch == null) { SBubble.MyError($"Name(\"{chrtag}\"):", "Character doesn't exist!", SBubble.TraceLua(statename)); return "Heroninumus Petrus Birokasu"; }
+            return ch.Name;
+        }
+        #endregion
+
     }
-    #endregion
 }
 
 }
