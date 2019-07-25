@@ -201,6 +201,19 @@ namespace NALA.Code_Dependencies.NALA {
             return ch.Name;
         }
         #endregion
+        #region DataStrings
+        public void SetCharData(string chrtag,string key,string value) {
+            var ch = RPG.GrabChar(chrtag); if (ch == null) { SBubble.MyError($"SetCharData(\"{chrtag}\",\"{key}\",\"{value}\"):", "Character doesn't exist!", SBubble.TraceLua(statename));  }
+            ch.SetData(key, value);
+        }
+
+        public string GetCharData(string chrtag, string key) {
+            var ch = RPG.GrabChar(chrtag); if (ch == null) { SBubble.MyError($"SetCharData(\"{chrtag}\",\"{key}\",\"{value}\"):", "Character doesn't exist!", SBubble.TraceLua(statename)); }
+            return ch.GetData(key);
+        }
+
+
+        #endregion
 
     }
 }

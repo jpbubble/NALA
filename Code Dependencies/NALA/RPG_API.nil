@@ -136,11 +136,21 @@ class RPGCharacter
 
 	readonly string ChTag
 	readonly static table TagMap
+	readonly table Data
+	
 	
 	void CONSTRUCTOR(string charTag)
 		assert(NALA_RPG:CharExists(chTag),"You cannot use 'new RPGCharacter()' directly!")
 		self.ChTag = chTag
 		self.TagMap[chTag] = self
+		setmetatable(self.Data,{
+			['__newindex'] = void(t, string k, string v)
+				NALA_RPG:SetData(self.ChTag,k,v)
+			end,
+			['__index'] = string(t, string k)
+				return NALA:_RPG:GetData(self.ChTag,k)
+			end
+		})
 	end
 	
 	static var GetChar(Tag)
@@ -176,6 +186,8 @@ class RPGCharacter
 	get string Name
 		return NALA_RPG:GetName(self.ChTag)
 	end
+	
+	
 end
 
 
