@@ -112,9 +112,10 @@ namespace NALA.Code_Dependencies.NALA {
                 return ;
             }
             st.Value = value;
-
         }
+        #endregion
 
+        #region Points
 
         #endregion
     }

@@ -78,6 +78,18 @@ class RPGStat
 	end
 end
 
+class RPGPoints
+	
+	readonly string ChTag
+	readonly string PtTag
+	readonly static table TagMap
+	
+	get string Tag
+		return string.format("%s::%s",self.ChTag,self.PtTag)
+	end
+	
+end
+
 
 class RPGCharacter
 
@@ -107,7 +119,9 @@ class RPGCharacter
 		return RPGStat.GetStat(self.ChTag,Stat)
 	end
 	
-	
+	var Points(string Pnt, CreateIfNonExistent)
+		
+	end
 end
 
 
