@@ -111,6 +111,14 @@ class RPGPoints
 	get number Have
 		return NALA_RPG:GetHavePoints(self.ChTag,self.PtTag,false)
 	end
+
+	set string MaxCopy
+		NALA_RPG:SetMaxCopyPoints(self.ChTag,self.PtTag,value,false)
+	end
+	
+	get string MaxCopy
+		return NALA_RPG:GetMaxCopyPoints(self.ChTag,self.PtTag,false)
+	end
 	
 	
 	void CONSTRUCTOR(string Char,string Pnt, bool CreateIfNonExistent)

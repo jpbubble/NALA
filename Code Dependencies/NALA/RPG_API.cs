@@ -176,6 +176,19 @@ namespace NALA.Code_Dependencies.NALA {
             if (pt.Have > pt.Maximum) pt.Have = pt.Maximum;
         }
 
+        string GetMaxCopyPoints(string chrtag, string pnttag, bool createifneeded) {
+            var ch = RPG.GrabChar(chrtag); if (ch == null) { SBubble.MyError($"ChkPoints(\"{chrtag}\",\"{pnttag}\"):", "Character doesn't exist!", SBubble.TraceLua(statename)); return 0; }
+            var pt = ch.Point(pnttag, createifneeded); if (pt == null) { SBubble.MyError($"ChkPoints(\"{chrtag}\",\"{pnttag}\"):", "Points record doesn't exist!", SBubble.TraceLua(statename)); return 0; }
+            return pt.MaxCopy;
+        }
+
+        void SetMaxCopyPoints(string chrtag, string pnttag, string value, bool createifneeded) {
+            var ch = RPG.GrabChar(chrtag); if (ch == null) { SBubble.MyError($"ChkPoints(\"{chrtag}\",\"{pnttag}\"):", "Character doesn't exist!", SBubble.TraceLua(statename)); return; }
+            var pt = ch.Point(pnttag, createifneeded); if (pt == null) { SBubble.MyError($"ChkPoints(\"{chrtag}\",\"{pnttag}\"):", "Points record doesn't exist!", SBubble.TraceLua(statename)); return; }
+            pt.MaxCopy = value;
+            pt.Maximum = GetStatValue(chrtag, pt.MaxCopy);
+        }
+
     }
     #endregion
 }
