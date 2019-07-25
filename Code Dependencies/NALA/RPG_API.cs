@@ -192,7 +192,7 @@ namespace NALA.Code_Dependencies.NALA {
         #endregion
         #region Name
         public void SetName(string chrtag, string Name) {
-            var ch = RPG.GrabChar(chrtag); if (ch == null) { SBubble.MyError($"Name(\"{chrtag}\",\"{name}\"):", "Character doesn't exist!", SBubble.TraceLua(statename)); return; }
+            var ch = RPG.GrabChar(chrtag); if (ch == null) { SBubble.MyError($"Name(\"{chrtag}\",\"{Name}\"):", "Character doesn't exist!", SBubble.TraceLua(statename)); return; }
             ch.Name = Name;
         }
 
