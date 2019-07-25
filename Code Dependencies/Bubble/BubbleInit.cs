@@ -51,6 +51,8 @@ namespace NALA {
             SBubble.AddInit(BubbleSuperGlobal.Init);
             SBubble.AddInit(Bubble_Input.Init);
             SBubble.AddInit(Bubble_Save.Init);
+            SBubble.AddInit(Bubble_Conf.Init);
+            SBubble.AddInit(Bubble_GameJolt.Init);
             #endregion
 
             #region The stuff needed for NALA in particular

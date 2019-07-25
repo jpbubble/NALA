@@ -1,0 +1,77 @@
+table RPGParty
+setmetatable(RPGParty,{
+	["__newindex"] = void(t,key, value)
+		switch type(key)
+			case "number"
+				assert(type(value)=="string","A string value is required to change a party member!")
+				NALA_RPG:setPartyMember(key,value)
+			case "string"
+				switch key:upper()
+					case "MAX"
+						assert(type(value)=="number","MAX only accepts a number as value!")
+						NALA_RPG.PartyMax = math.floor(value);
+					default
+						error("Unknown field!")
+			default
+				error("Type "..type(key).." is completely useless as index for RPGParty")
+		end
+	end,
+	
+	["__index"] = var(t,key)
+		switch type(key)
+			case "number"				
+				return NALA_RPG:getPartyMember(key)
+			case "string"
+				switch key:upper()
+					case "MAX"						
+						return NALA_RPG.PartyMax 
+					default
+						error("Unknown field!")
+			default
+				error("Type "..type(key).." is completely useless as index for RPGParty")
+		end
+	end
+	
+})
+
+class RPGStat
+	readonly static table TagMap
+	
+	
+end
+
+
+class RPGCharacter
+
+	readonly string Tag
+	readonly static table TagMap
+	
+	void CONSTRUCTOR(chTag)
+		assert(NALA_RPG:CharExists[chTag],"You cannot use 'new RPGCharacter()' directly!")
+		self.Tag = chTag
+		self.TagMap[chTag] = self
+	end
+	
+	static var GetChar(Tag)
+		assert(TagMap[Tag] and NALA_RPG:CharExists[Tag],string.format("Requested character '%s' does not exist",Tag))
+		return TagMap[Tag]
+	end
+end
+
+
+group RPG
+
+	get table Party
+		return RPGParty
+	end
+
+	var CreateChar(string tag)
+		NALA_RPG:CreateCharacter(tag)
+		return new RPGCharacter(tag)
+	end
+	
+	var Char(tag)
+		return RPGCharacter.GetChar(tag)
+	end
+
+end

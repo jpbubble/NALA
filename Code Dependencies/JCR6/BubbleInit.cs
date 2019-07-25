@@ -40,6 +40,7 @@ namespace UseJCR6 {
     static class BubbleInit {
 
         public static void Init() {
+            KiloUtrechtTango.INIT();
             JCR6_lzma.Init();
             JCR6_zlib.Init();
             new JCR6_RealDir();

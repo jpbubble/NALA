@@ -24,6 +24,7 @@
 // Version: 19.07.12
 // EndLic
 
+#undef FATAL_GAMEJOLT
 
 
 using Microsoft.Xna.Framework;
@@ -89,7 +90,14 @@ namespace NALA {
 
             BubbleInit.LetsGo();
 
-
+            TrickyGameJolt.GJAPI.ERRORFUNCTION = delegate (string msg) {
+#if FATAL_GAMEJOLT
+                SBubble.MyError("Game Jolt API Error", msg, "");
+#else
+                BubConsole.WriteLine("GAME JOLT ERROR",255,0,0); System.Console.Beep();
+                BubConsole.WriteLine(msg);
+#endif
+            };
         }
 
         /// <summary>
@@ -108,6 +116,7 @@ namespace NALA {
         protected override void Update(GameTime gameTime) {
 
 
+            Bubble_Input.MouseHitUpdate();
             FlowManager.Update(gameTime);
 
             // if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
