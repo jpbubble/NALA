@@ -168,6 +168,14 @@ class RPGCharacter
 		end
 		return RPGPoints.TagMap[tag]
 	end
+	
+	set string Name
+		NALA_RPG:SetName(self.ChTag,value)
+	end
+	
+	get string Name
+		return NALA_RPG:GetName(self.ChTag)
+	end
 end
 
 
