@@ -70,14 +70,14 @@ class RPGStat
 	end
 	
 	set number Value
-		return NALA_RPG:SetStatValue(self.ChTag,self.StTag,value)
+		NALA_RPG:SetStatValue(self.ChTag,self.StTag,value)
 	end
 	
 	void CONSTRUCTOR(string char,string stat)
 		assert(NALA_RPG:StatExists(char,stat) ,"You cannot use 'new RPGStat()' directly!")
 		self.ChTag = char
 		self.StTag = stat
-		self.TagMap[Tag] = self
+		self.TagMap[self.Tag] = self
 	end
 end
 
@@ -128,12 +128,11 @@ class RPGPoints
 		NALA_RPG:ChkPoints(Char,Pnt,CreateIfNonExistent)
 		self.ChTag = Char
 		self.ptTag = Pnt
-		self.TagMap[Tag] = self
+		self.TagMap[self.Tag] = self
 		//-- Please note, when this goes wrong, the program will crash out anyway, so the class creation doesn't hurt at all!
 	end
 	
 end
-
 
 class RPGCharacter
 
@@ -141,24 +140,23 @@ class RPGCharacter
 	readonly static table TagMap
 	readonly table Data
 	
-	
 	void CONSTRUCTOR(string charTag)
-		assert(NALA_RPG:CharExists(chTag),"You cannot use 'new RPGCharacter()' directly!")
-		self.ChTag = chTag
-		self.TagMap[chTag] = self
+		assert(NALA_RPG:CharExists(charTag),"You cannot use 'new RPGCharacter()' directly!")
+		self.ChTag = charTag
+		self.TagMap[charTag] = self
 		setmetatable(self.Data,{
 			['__newindex'] = void(t, string k, string v)
 				NALA_RPG:SetData(self.ChTag,k,v)
 			end,
 			['__index'] = string(t, string k)
-				return NALA:_RPG:GetData(self.ChTag,k)
+				return NALA_RPG:GetData(self.ChTag,k)
 			end
 		})
 	end
 	
 	static var GetChar(Tag)
-		assert(self.TagMap[Tag] and NALA_RPG:CharExists[Tag],string.format("Requested character '%s' does not exist",Tag))
-		return self.TagMap[Tag]
+		assert(RPGCharacter.TagMap[Tag] and NALA_RPG:CharExists[Tag],string.format("Requested character '%s' does not exist",Tag))
+		return RPGCharacter.TagMap[Tag]
 	end
 	
 	var Stat(string Stat, mustexist)
