@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 using Bubble;
 using TrickyUnits;
 
-namespace NALA.Code_Dependencies.NALA {
+namespace NALA {
     class RPG_API {
         static RPG_API me;
         string statename;
-        static void Init(string state) {
+        static public void Init(string state) {
             me = new RPG_API();
             var script = QuickStream.StringFromEmbed("RPG_API.nil");
             SBubble.State(state).state["NALA_RPG"] = me;
@@ -177,8 +177,8 @@ namespace NALA.Code_Dependencies.NALA {
         }
 
         public string GetMaxCopyPoints(string chrtag, string pnttag, bool createifneeded) {
-            var ch = RPG.GrabChar(chrtag); if (ch == null) { SBubble.MyError($"ChkPoints(\"{chrtag}\",\"{pnttag}\"):", "Character doesn't exist!", SBubble.TraceLua(statename)); return 0; }
-            var pt = ch.Point(pnttag, createifneeded); if (pt == null) { SBubble.MyError($"ChkPoints(\"{chrtag}\",\"{pnttag}\"):", "Points record doesn't exist!", SBubble.TraceLua(statename)); return 0; }
+            var ch = RPG.GrabChar(chrtag); if (ch == null) { SBubble.MyError($"ChkPoints(\"{chrtag}\",\"{pnttag}\"):", "Character doesn't exist!", SBubble.TraceLua(statename)); return ""; }
+            var pt = ch.Point(pnttag, createifneeded); if (pt == null) { SBubble.MyError($"ChkPoints(\"{chrtag}\",\"{pnttag}\"):", "Points record doesn't exist!", SBubble.TraceLua(statename)); return ""; }
             return pt.MaxCopy;
         }
 
@@ -202,13 +202,13 @@ namespace NALA.Code_Dependencies.NALA {
         }
         #endregion
         #region DataStrings
-        public void SetCharData(string chrtag,string key,string value) {
-            var ch = RPG.GrabChar(chrtag); if (ch == null) { SBubble.MyError($"SetCharData(\"{chrtag}\",\"{key}\",\"{value}\"):", "Character doesn't exist!", SBubble.TraceLua(statename));  }
+        public void SetCharData(string chrtag, string key, string value) {
+            var ch = RPG.GrabChar(chrtag); if (ch == null) { SBubble.MyError($"SetCharData(\"{chrtag}\",\"{key}\",\"{value}\"):", "Character doesn't exist!", SBubble.TraceLua(statename)); }
             ch.SetData(key, value);
         }
 
         public string GetCharData(string chrtag, string key) {
-            var ch = RPG.GrabChar(chrtag); if (ch == null) { SBubble.MyError($"SetCharData(\"{chrtag}\",\"{key}\",\"{value}\"):", "Character doesn't exist!", SBubble.TraceLua(statename)); }
+            var ch = RPG.GrabChar(chrtag); if (ch == null) { SBubble.MyError($"SetCharData(\"{chrtag}\",\"{key}\"):", "Character doesn't exist!", SBubble.TraceLua(statename)); }
             return ch.GetData(key);
         }
 
@@ -216,6 +216,4 @@ namespace NALA.Code_Dependencies.NALA {
         #endregion
 
     }
-}
-
 }

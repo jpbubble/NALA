@@ -57,7 +57,8 @@ namespace NALA {
 
             #region The stuff needed for NALA in particular
             // Own APIs for NIL and Lua
-            SBubble.AddInit(MapScriptAPI.API_Init);
+            //SBubble.AddInit(MapScriptAPI.API_Init);
+            SBubble.AddInit(RPG_API.Init);
 
             // Kthura Init
             Kthura.SetDefaultTextureJCR(SBubble.JCR); // Textures are all in the same project
