@@ -42,18 +42,19 @@ class RPGStat
 	readonly string StTag
 	
 	get string Tag
-		return string.format("%s::%s",ChTag,StTag)
+		return string.format("%s::%s",self.ChTag,self.StTag)
 	end
 	
 	static bool Static_Has(string ch, string stat)
 		string t 
-		t = string.format("%s::%s",ChTag,StTag)
-		return self.TagMap[t]!=nil
+		t = string.format("%s::%s",RPGStat.ChTag,RPGStat.StTag)
+		return RPGStat.TagMap[t]!=nil
 	end
 	
 	static var GetStat(string ch,string stat)
-		t = string.format("%s::%s",ChTag,StTag)
-		return self.TagMap[t]
+		string t
+		t = string.format("%s::%s",RPGStat.ChTag,RPGStat.StTag)
+		return RPGStat.TagMap[t]
 	end
 	
 	set string Script
