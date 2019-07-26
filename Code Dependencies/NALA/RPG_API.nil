@@ -48,7 +48,7 @@ class RPGStat
 	static bool Static_Has(string ch, string stat)
 		string t 
 		t = string.format("%s::%s",RPGStat.ChTag,RPGStat.StTag)
-		return RPGStat.TagMap[t]!=nil
+		return RPGStat.TagMap[t]!=nil;
 	end
 	
 	static var GetStat(string ch,string stat)
@@ -155,7 +155,7 @@ class RPGCharacter
 	end
 	
 	static var GetChar(Tag)
-		assert(RPGCharacter.TagMap[Tag] and NALA_RPG:CharExists[Tag],string.format("Requested character '%s' does not exist",Tag))
+		assert(RPGCharacter.TagMap[Tag] and NALA_RPG:CharExists(Tag),string.format("Requested character '%s' does not exist",Tag))
 		return RPGCharacter.TagMap[Tag]
 	end
 	
@@ -174,7 +174,7 @@ class RPGCharacter
 	var Points(string Pnt, CreateIfNonExistent)
 		var tag
 		tag = string.format("%s::%s",self.ChTag,Pnt)
-		if not RPGPoints.TagMap[tag]
+		if not RPGPoints.TagMap[tag] then
 			new RPGPoints(Pnt,CreateIfNonExistent==true)
 		end
 		return RPGPoints.TagMap[tag]
@@ -209,7 +209,7 @@ group RPG
 	end
 	
 	void CONSTRUCTOR()
-		GetChar = RPGCharacter.GetChar
+		self.GetChar = RPGCharacter.GetChar
 	end
 
 end
