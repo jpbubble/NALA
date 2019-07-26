@@ -12,6 +12,7 @@ setmetatable(RPGParty,{
 						NALA_RPG.PartyMax = math.floor(value);
 					default
 						error("Unknown field!")
+				end
 			default
 				error("Type "..type(key).." is completely useless as index for RPGParty")
 		end
@@ -27,6 +28,7 @@ setmetatable(RPGParty,{
 						return NALA_RPG.PartyMax 
 					default
 						error("Unknown field!")
+				end
 			default
 				error("Type "..type(key).." is completely useless as index for RPGParty")
 		end
