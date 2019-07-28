@@ -135,7 +135,8 @@ namespace NALA {
         protected override void Draw(GameTime gameTime) {
             GraphicsDevice.Clear(Color.Black);
             spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.NonPremultiplied, SamplerState.LinearWrap, DepthStencilState.Default, null);
-            
+            //spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, SamplerState.LinearWrap, DepthStencilState.Default, null);
+
             FlowManager.Draw(gameTime);
 
             spriteBatch.End();
