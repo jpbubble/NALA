@@ -63,8 +63,10 @@ namespace NALA {
             // Kthura Init
             Kthura.SetDefaultTextureJCR(SBubble.JCR); // Textures are all in the same project
             KthuraDraw.DrawDriver = new KthuraDrawMonoGame(); // Tell Kthura to use the MonoGame Driver to display the map
-            SBubble.AddInit(KthuraBubble.KthuraBubble.Init);
+            KthuraDrawMonoGame.CrashOnNoTex = delegate (string msg) { SBubble.MyError("Kthura Texture Error", msg, ""); };
+
             // SBubble Kthura API
+            SBubble.AddInit(KthuraBubble.KthuraBubble.Init);
 
             // TODO: API for TeddyBear
             // TODO: API for Swap Data Manager

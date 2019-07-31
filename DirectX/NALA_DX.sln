@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.489
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NALA", "NALA.csproj", "{449E5E13-C5AF-4F23-A12C-4233CE299920}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NALA_DX", "NALA_DX\NALA_DX.csproj", "{3AB1C509-5E17-4126-B4A0-687706FBC71C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{449E5E13-C5AF-4F23-A12C-4233CE299920}.Debug|x86.ActiveCfg = Debug|x86
-		{449E5E13-C5AF-4F23-A12C-4233CE299920}.Debug|x86.Build.0 = Debug|x86
-		{449E5E13-C5AF-4F23-A12C-4233CE299920}.Release|x86.ActiveCfg = Release|x86
-		{449E5E13-C5AF-4F23-A12C-4233CE299920}.Release|x86.Build.0 = Release|x86
+		{3AB1C509-5E17-4126-B4A0-687706FBC71C}.Debug|x86.ActiveCfg = Debug|x86
+		{3AB1C509-5E17-4126-B4A0-687706FBC71C}.Debug|x86.Build.0 = Debug|x86
+		{3AB1C509-5E17-4126-B4A0-687706FBC71C}.Release|x86.ActiveCfg = Release|x86
+		{3AB1C509-5E17-4126-B4A0-687706FBC71C}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {859A3218-4CBA-4EEE-8D24-C52F4709ED7F}
+		SolutionGuid = {5BD34F95-90DD-43FC-B06C-80353C1EC308}
 	EndGlobalSection
 EndGlobal

@@ -1,0 +1,473 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3AB1C509-5E17-4126-B4A0-687706FBC71C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NALA_DX</RootNamespace>
+    <AssemblyName>NALA_DX</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MonoGamePlatform>Windows</MonoGamePlatform>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\$(MonoGamePlatform)\$(Platform)\$(Configuration)\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;WINDOWS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\$(MonoGamePlatform)\$(Platform)\$(Configuration)\</OutputPath>
+    <DefineConstants>TRACE;WINDOWS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="..\..\..\..\GameJolt\TrickyGameJolt\GameJoltAPIForCSharpByTricky.cs">
+      <Link>Dependencies\Game Jolt\Contact\GameJoltAPIForCSharpByTricky.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\JCR6\Drivers\Compression\jxsrcca\jcr6_jxsrcca.cs">
+      <Link>Dependencies\JCR6\Drivers\Compression\jxsrcca\jcr6_jxsrcca.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\JCR6\Drivers\Compression\lzma\Common\CommandLineParser.cs">
+      <Link>Dependencies\JCR6\Drivers\Compression\lzma\Common\CommandLineParser.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\JCR6\Drivers\Compression\lzma\Common\CRC.cs">
+      <Link>Dependencies\JCR6\Drivers\Compression\lzma\Common\CRC.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\JCR6\Drivers\Compression\lzma\Common\InBuffer.cs">
+      <Link>Dependencies\JCR6\Drivers\Compression\lzma\Common\InBuffer.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\JCR6\Drivers\Compression\lzma\Common\OutBuffer.cs">
+      <Link>Dependencies\JCR6\Drivers\Compression\lzma\Common\OutBuffer.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\JCR6\Drivers\Compression\lzma\ICoder\ICoder.cs">
+      <Link>Dependencies\JCR6\Drivers\Compression\lzma\ICoder\ICoder.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\JCR6\Drivers\Compression\lzma\lzma2jcr6.cs">
+      <Link>Dependencies\JCR6\Drivers\Compression\lzma\lzma2jcr6.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\JCR6\Drivers\Compression\lzma\LZMA\LzmaBase.cs">
+      <Link>Dependencies\JCR6\Drivers\Compression\lzma\LZMA\LzmaBase.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\JCR6\Drivers\Compression\lzma\LZMA\LzmaDecoder.cs">
+      <Link>Dependencies\JCR6\Drivers\Compression\lzma\LZMA\LzmaDecoder.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\JCR6\Drivers\Compression\lzma\LZMA\LzmaEncoder.cs">
+      <Link>Dependencies\JCR6\Drivers\Compression\lzma\LZMA\LzmaEncoder.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\JCR6\Drivers\Compression\lzma\LZ\IMatchFinder.cs">
+      <Link>Dependencies\JCR6\Drivers\Compression\lzma\LZ\IMatchFinder.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\JCR6\Drivers\Compression\lzma\LZ\LzBinTree.cs">
+      <Link>Dependencies\JCR6\Drivers\Compression\lzma\LZ\LzBinTree.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\JCR6\Drivers\Compression\lzma\LZ\LzInWindow.cs">
+      <Link>Dependencies\JCR6\Drivers\Compression\lzma\LZ\LzInWindow.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\JCR6\Drivers\Compression\lzma\LZ\LzOutWindow.cs">
+      <Link>Dependencies\JCR6\Drivers\Compression\lzma\LZ\LzOutWindow.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\JCR6\Drivers\Compression\lzma\RangeCoder\RangeCoder.cs">
+      <Link>Dependencies\JCR6\Drivers\Compression\lzma\RangeCoder\RangeCoder.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\JCR6\Drivers\Compression\lzma\RangeCoder\RangeCoderBit.cs">
+      <Link>Dependencies\JCR6\Drivers\Compression\lzma\RangeCoder\RangeCoderBit.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\JCR6\Drivers\Compression\lzma\RangeCoder\RangeCoderBitTree.cs">
+      <Link>Dependencies\JCR6\Drivers\Compression\lzma\RangeCoder\RangeCoderBitTree.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\JCR6\Drivers\Compression\lzma\SevenZipHelper.cs">
+      <Link>Dependencies\JCR6\Drivers\Compression\lzma\SevenZipHelper.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\JCR6\Drivers\Compression\zlib\zlib.cs">
+      <Link>Dependencies\JCR6\Drivers\Compression\zlib\zlib.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\JCR6\Drivers\Compression\zlib\zlib\Adler32.cs">
+      <Link>Dependencies\JCR6\Drivers\Compression\zlib\zlib\Adler32.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\JCR6\Drivers\Compression\zlib\zlib\AssemblyInfo.cs">
+      <Link>Dependencies\JCR6\Drivers\Compression\zlib\zlib\AssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\JCR6\Drivers\Compression\zlib\zlib\Deflate.cs">
+      <Link>Dependencies\JCR6\Drivers\Compression\zlib\zlib\Deflate.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\JCR6\Drivers\Compression\zlib\zlib\InfBlocks.cs">
+      <Link>Dependencies\JCR6\Drivers\Compression\zlib\zlib\InfBlocks.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\JCR6\Drivers\Compression\zlib\zlib\InfCodes.cs">
+      <Link>Dependencies\JCR6\Drivers\Compression\zlib\zlib\InfCodes.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\JCR6\Drivers\Compression\zlib\zlib\Inflate.cs">
+      <Link>Dependencies\JCR6\Drivers\Compression\zlib\zlib\Inflate.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\JCR6\Drivers\Compression\zlib\zlib\InfTree.cs">
+      <Link>Dependencies\JCR6\Drivers\Compression\zlib\zlib\InfTree.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\JCR6\Drivers\Compression\zlib\zlib\StaticTree.cs">
+      <Link>Dependencies\JCR6\Drivers\Compression\zlib\zlib\StaticTree.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\JCR6\Drivers\Compression\zlib\zlib\SupportClass.cs">
+      <Link>Dependencies\JCR6\Drivers\Compression\zlib\zlib\SupportClass.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\JCR6\Drivers\Compression\zlib\zlib\Tree.cs">
+      <Link>Dependencies\JCR6\Drivers\Compression\zlib\zlib\Tree.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\JCR6\Drivers\Compression\zlib\zlib\ZInputStream.cs">
+      <Link>Dependencies\JCR6\Drivers\Compression\zlib\zlib\ZInputStream.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\JCR6\Drivers\Compression\zlib\zlib\Zlib.cs">
+      <Link>Dependencies\JCR6\Drivers\Compression\zlib\zlib\Zlib.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\JCR6\Drivers\Compression\zlib\zlib\ZOutputStream.cs">
+      <Link>Dependencies\JCR6\Drivers\Compression\zlib\zlib\ZOutputStream.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\JCR6\Drivers\Compression\zlib\zlib\ZStream.cs">
+      <Link>Dependencies\JCR6\Drivers\Compression\zlib\zlib\ZStream.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\JCR6\Drivers\Compression\zlib\zlib\ZStreamException.cs">
+      <Link>Dependencies\JCR6\Drivers\Compression\zlib\zlib\ZStreamException.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\JCR6\Drivers\FileTypes\JCR5.cs">
+      <Link>Dependencies\JCR6\Drivers\FileTypes\JCR5.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\JCR6\Drivers\FileTypes\QuakePAK.cs">
+      <Link>Dependencies\JCR6\Drivers\FileTypes\QuakePAK.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\JCR6\Drivers\FileTypes\RealDir.cs">
+      <Link>Dependencies\JCR6\Drivers\FileTypes\RealDir.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\JCR6\Drivers\FileTypes\WAD.cs">
+      <Link>Dependencies\JCR6\Drivers\FileTypes\WAD.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\JCR6\jcr6.cs">
+      <Link>Dependencies\JCR6\jcr6.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\Kthura\Source\Class\KthuraCore.cs">
+      <Link>Dependencies\Kthura\Engine\KthuraCore.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\Kthura\Source\Class\KthuraDraw.cs">
+      <Link>Dependencies\Kthura\Engine\KthuraDraw.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\Kthura\Source\Class\KthuraDrawMonoGame.cs">
+      <Link>Dependencies\Kthura\Engine\KthuraDrawMonoGame.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\Kthura\Source\Class\KthuraSave.cs">
+      <Link>Dependencies\Kthura\Engine\KthuraSave.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\Kthura\Source\KthuraBubble\KthuraBubble.cs">
+      <Link>Dependencies\Kthura\API\KthuraBubble.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\Secu\KiloUtrechtTango.cs">
+      <Link>Dependencies\Secu\KiloUtrechtTango.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\TQMG\TQMG.cs">
+      <Link>Dependencies\Tricky%27s Units\TQMG.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\TrickyUnits\Dirry.cs">
+      <Link>Dependencies\Tricky%27s Units\Dirry.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\TrickyUnits\FileList.cs">
+      <Link>Dependencies\Tricky%27s Units\FileList.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\TrickyUnits\FormConfirm.cs">
+      <Link>Dependencies\Tricky%27s Units\FormConfirm.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\TrickyUnits\FormSelectFiles.cs">
+      <Link>Dependencies\Tricky%27s Units\FormSelectFiles.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\TrickyUnits\GINI Is Not Ini.cs">
+      <Link>Dependencies\Tricky%27s Units\GINI Is Not Ini.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\TrickyUnits\mkl.cs">
+      <Link>Dependencies\Tricky%27s Units\mkl.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\TrickyUnits\OpenURI.cs">
+      <Link>Dependencies\Tricky%27s Units\OpenURI.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\TrickyUnits\qstr.cs">
+      <Link>Dependencies\Tricky%27s Units\qstr.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\TrickyUnits\qstream.cs">
+      <Link>Dependencies\Tricky%27s Units\qstream.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\TrickyUnits\RPGStats.cs">
+      <Link>Dependencies\Tricky%27s Units\RPGStats.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Game Jolt\Game Jolt.cs">
+      <Link>Dependencies\Game Jolt\API\Game Jolt.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Libraries\BubbleBankClass.cs">
+      <Link>Dependencies\Bubble\Main\BubbleBankClass.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Libraries\BubbleJCRClass.cs">
+      <Link>Dependencies\Bubble\Main\BubbleJCRClass.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Libraries\BubbleMainClass.cs">
+      <Link>Dependencies\Bubble\Main\BubbleMainClass.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Libraries\BubbleSave.cs">
+      <Link>Dependencies\Bubble\Main\BubbleSave.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Libraries\BubbleSuperGlobal.cs">
+      <Link>Dependencies\Bubble\Main\BubbleSuperGlobal.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\MonoGame\src\dep\Bubble\Class\BubbleConsole.cs">
+      <Link>Dependencies\Bubble\MonoGame\API Class\BubbleConsole.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\MonoGame\src\dep\Bubble\Class\BubbleGraphics.cs">
+      <Link>Dependencies\Bubble\MonoGame\API Class\BubbleGraphics.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\MonoGame\src\dep\Bubble\Class\BubbleMGSysFont.cs">
+      <Link>Dependencies\Bubble\MonoGame\API Class\BubbleMGSysFont.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\MonoGame\src\dep\Bubble\Class\Bubble_Audio.cs">
+      <Link>Dependencies\Bubble\MonoGame\API Class\Bubble_Audio.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\MonoGame\src\dep\Bubble\Class\Bubble_Conf.cs">
+      <Link>Dependencies\Bubble\MonoGame\API Class\Bubble_Conf.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\MonoGame\src\dep\Bubble\Class\Bubble_Input.cs">
+      <Link>Dependencies\Bubble\MonoGame\API Class\Bubble_Input.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\MonoGame\src\Flow\AlgemeneFlowManager.cs">
+      <Link>Dependencies\Bubble\MonoGame\Flow\AlgemeneFlowManager.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\MonoGame\src\Flow\Console.cs">
+      <Link>Dependencies\Bubble\MonoGame\Flow\Console.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\MonoGame\src\Flow\Error.cs">
+      <Link>Dependencies\Bubble\MonoGame\Flow\Error.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\MonoGame\src\Flow\FlowCallBack.cs">
+      <Link>Dependencies\Bubble\MonoGame\Flow\FlowCallBack.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\MonoGame\src\Flow\FlowRepeat.cs">
+      <Link>Dependencies\Bubble\MonoGame\Flow\FlowRepeat.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Code Dependencies\Bubble\BubbleInit.cs">
+      <Link>BubbleInit.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Code Dependencies\JCR6\BubbleInit.cs">
+      <Link>Dependencies\JCR6\BubbleInit.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Code Dependencies\NALA\MapScriptAPI.cs">
+      <Link>Dependencies\NALA\API\MapScriptAPI.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Code Dependencies\NALA\RPG_API.cs">
+      <Link>Dependencies\NALA\API\RPG_API.cs</Link>
+    </Compile>
+    <Compile Include="..\..\NALACore.cs">
+      <Link>NALACore.cs</Link>
+    </Compile>
+    <Compile Include="..\..\VoidMain.cs">
+      <Link>VoidMain.cs</Link>
+    </Compile>
+    <Compile Include="Dummied\Game1.cs" />
+    <Compile Include="Dummied\VoidMainDummied.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="KeraLua, Version=1.0.19.0, Culture=neutral, PublicKeyToken=6a194c04b9c89217, processorArchitecture=MSIL">
+      <HintPath>..\packages\KeraLua.1.0.19\lib\net45\KeraLua.dll</HintPath>
+    </Reference>
+    <Reference Include="MonoGame.Framework">
+      <HintPath>$(MonoGameInstallDirectory)\MonoGame\v3.0\Assemblies\Windows\MonoGame.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="NLua, Version=1.4.20.0, Culture=neutral, PublicKeyToken=6a194c04b9c89217, processorArchitecture=MSIL">
+      <HintPath>..\packages\NLua.1.4.20\lib\net45\NLua.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\Death.png" />
+    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\100.png" />
+    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\101.png" />
+    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\102.png" />
+    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\103.png" />
+    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\104.png" />
+    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\105.png" />
+    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\106.png" />
+    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\107.png" />
+    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\108.png" />
+    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\109.png" />
+    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\110.png" />
+    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\111.png" />
+    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\112.png" />
+    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\113.png" />
+    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\114.png" />
+    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\115.png" />
+    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\116.png" />
+    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\117.png" />
+    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\118.png" />
+    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\119.png" />
+    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\120.png" />
+    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\121.png" />
+    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\122.png" />
+    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\123.png" />
+    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\124.png" />
+    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\125.png" />
+    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\126.png" />
+    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\33.png" />
+    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\34.png" />
+    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\35.png" />
+    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\36.png" />
+    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\37.png" />
+    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\38.png" />
+    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\39.png" />
+    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\40.png" />
+    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\41.png" />
+    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\42.png" />
+    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\43.png" />
+    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\44.png" />
+    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\45.png" />
+    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\46.png" />
+    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\47.png" />
+    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\48.png" />
+    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\49.png" />
+    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\50.png" />
+    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\51.png" />
+    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\52.png" />
+    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\53.png" />
+    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\54.png" />
+    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\55.png" />
+    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\56.png" />
+    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\57.png" />
+    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\58.png" />
+    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\59.png" />
+    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\60.png" />
+    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\61.png" />
+    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\62.png" />
+    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\63.png" />
+    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\64.png" />
+    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\65.png" />
+    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\66.png" />
+    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\67.png" />
+    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\68.png" />
+    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\69.png" />
+    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\70.png" />
+    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\71.png" />
+    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\72.png" />
+    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\73.png" />
+    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\74.png" />
+    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\75.png" />
+    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\76.png" />
+    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\77.png" />
+    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\78.png" />
+    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\79.png" />
+    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\80.png" />
+    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\81.png" />
+    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\82.png" />
+    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\83.png" />
+    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\84.png" />
+    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\85.png" />
+    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\86.png" />
+    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\87.png" />
+    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\88.png" />
+    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\89.png" />
+    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\90.png" />
+    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\91.png" />
+    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\92.png" />
+    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\93.png" />
+    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\94.png" />
+    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\95.png" />
+    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\96.png" />
+    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\97.png" />
+    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\98.png" />
+    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\99.png" />
+    <Content Include="Icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <MonoGameContentReference Include="Content\Content.mgcb" />
+    <None Include="..\..\..\..\JCR6\Drivers\Compression\lzma\readme.md">
+      <Link>Dependencies\JCR6\Drivers\Compression\lzma\readme.md</Link>
+    </None>
+    <None Include="..\..\..\..\JCR6\Drivers\Compression\readme.md">
+      <Link>Dependencies\JCR6\Drivers\Compression\readme.md</Link>
+    </None>
+    <None Include="..\..\..\..\JCR6\Drivers\Compression\zlib\readme.md">
+      <Link>Dependencies\JCR6\Drivers\Compression\zlib\readme.md</Link>
+    </None>
+    <None Include="..\..\..\..\JCR6\Drivers\FileTypes\Readme.md">
+      <Link>Dependencies\JCR6\Drivers\FileTypes\Readme.md</Link>
+    </None>
+    <EmbeddedResource Include="..\..\..\MonoGame\src\dep\Bubble\NIL\Audio.nil">
+      <Link>Dependencies\Bubble\MonoGame\Flow\Lua and NIL\Audio.nil</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\..\..\MonoGame\src\dep\Bubble\NIL\Bubble_Conf.nil">
+      <Link>Dependencies\Bubble\MonoGame\Flow\Lua and NIL\Bubble_Conf.nil</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\..\..\MonoGame\src\dep\Bubble\NIL\Flow.lua">
+      <Link>Dependencies\Bubble\MonoGame\Flow\Lua and NIL\Flow.lua</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\..\..\MonoGame\src\dep\Bubble\NIL\Graphics.nil">
+      <Link>Dependencies\Bubble\MonoGame\Flow\Lua and NIL\Graphics.nil</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\..\..\MonoGame\src\dep\Bubble\NIL\Input.lua">
+      <Link>Dependencies\Bubble\MonoGame\Flow\Lua and NIL\Input.lua</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\..\Code Dependencies\NALA\MapScriptAPI.nil">
+      <Link>Dependencies\NALA\API\MapScriptAPI.nil</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\..\Code Dependencies\NALA\RPG_API.nil">
+      <Link>Dependencies\NALA\API\RPG_API.nil</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\..\..\Game Jolt\Game Jolt.nil">
+      <Link>Dependencies\Game Jolt\API\Game Jolt.nil</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\..\..\..\Kthura\Source\KthuraBubble\KthuraBubble.nil">
+      <Link>Dependencies\Kthura\API\KthuraBubble.nil</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\..\..\NIL\NIL.lua">
+      <Link>Dependencies\Bubble\NIL\NIL.lua</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\..\..\Libraries\BubbleSave.nil">
+      <Link>Dependencies\Bubble\Main\Script\BubbleSave.nil</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\..\..\Libraries\BubbleSuperGlobal.lua">
+      <Link>Dependencies\Bubble\Main\Script\BubbleSuperGlobal.lua</Link>
+    </EmbeddedResource>
+    <None Include="app.manifest" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Content.Builder.targets" />
+  <Import Project="..\packages\KeraLua.1.0.19\build\net45\KeraLua.targets" Condition="Exists('..\packages\KeraLua.1.0.19\build\net45\KeraLua.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\KeraLua.1.0.19\build\net45\KeraLua.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\KeraLua.1.0.19\build\net45\KeraLua.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
