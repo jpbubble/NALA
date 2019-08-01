@@ -107,8 +107,8 @@ namespace NALA {
         public void SetStatValue(string chrtag, string stattag, int value) {
             var ch = RPG.GrabChar(chrtag); if (ch == null) SBubble.MyError($"GetStatValue(\"{chrtag}\",\"{stattag}\"):", "Character doesn't exist!", SBubble.TraceLua(statename));
             var st = ch.Stat(stattag); if (st == null) SBubble.MyError($"GetStatValue(\"{chrtag}\",\"{stattag}\"):", "Stat doesn't exist!", SBubble.TraceLua(statename));
-            if (st.ScriptFile == "") {
-                SBubble.MyError($"SetStatValue(\"{chrtag}\", \"{stattag}\", {value});", "Scripted stats cannot have their value manually reassinged!", SBubble.TraceLua(statename));
+            if (st.ScriptFile != "") {
+                SBubble.MyError($"SetStatValue(\"{chrtag}\", \"{stattag}\", {value});", "Scripted stats cannot have their value manually reassinged!", $"{SBubble.TraceLua(statename)}\n\nScript in stat: \"{st.ScriptFile}\"");
                 return;
             }
             st.Value = value;
