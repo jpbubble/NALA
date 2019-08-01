@@ -303,101 +303,291 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\Death.png" />
-    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\100.png" />
-    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\101.png" />
-    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\102.png" />
-    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\103.png" />
-    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\104.png" />
-    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\105.png" />
-    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\106.png" />
-    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\107.png" />
-    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\108.png" />
-    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\109.png" />
-    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\110.png" />
-    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\111.png" />
-    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\112.png" />
-    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\113.png" />
-    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\114.png" />
-    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\115.png" />
-    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\116.png" />
-    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\117.png" />
-    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\118.png" />
-    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\119.png" />
-    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\120.png" />
-    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\121.png" />
-    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\122.png" />
-    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\123.png" />
-    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\124.png" />
-    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\125.png" />
-    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\126.png" />
-    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\33.png" />
-    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\34.png" />
-    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\35.png" />
-    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\36.png" />
-    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\37.png" />
-    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\38.png" />
-    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\39.png" />
-    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\40.png" />
-    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\41.png" />
-    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\42.png" />
-    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\43.png" />
-    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\44.png" />
-    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\45.png" />
-    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\46.png" />
-    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\47.png" />
-    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\48.png" />
-    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\49.png" />
-    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\50.png" />
-    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\51.png" />
-    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\52.png" />
-    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\53.png" />
-    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\54.png" />
-    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\55.png" />
-    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\56.png" />
-    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\57.png" />
-    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\58.png" />
-    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\59.png" />
-    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\60.png" />
-    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\61.png" />
-    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\62.png" />
-    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\63.png" />
-    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\64.png" />
-    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\65.png" />
-    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\66.png" />
-    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\67.png" />
-    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\68.png" />
-    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\69.png" />
-    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\70.png" />
-    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\71.png" />
-    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\72.png" />
-    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\73.png" />
-    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\74.png" />
-    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\75.png" />
-    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\76.png" />
-    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\77.png" />
-    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\78.png" />
-    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\79.png" />
-    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\80.png" />
-    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\81.png" />
-    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\82.png" />
-    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\83.png" />
-    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\84.png" />
-    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\85.png" />
-    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\86.png" />
-    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\87.png" />
-    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\88.png" />
-    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\89.png" />
-    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\90.png" />
-    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\91.png" />
-    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\92.png" />
-    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\93.png" />
-    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\94.png" />
-    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\95.png" />
-    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\96.png" />
-    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\97.png" />
-    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\98.png" />
-    <EmbeddedResource Include="Dependencies\Bubble\MonoGame\Embed\SysFont\99.png" />
+    <Content Include="..\..\..\MonoGame\src\dep\Embed\Death.png">
+      <Link>Dependencies\Bubble\MonoGame\Embed\Death.png</Link>
+    </Content>
+    <Content Include="..\..\..\MonoGame\src\dep\Embed\SysFont\100.png">
+      <Link>Dependencies\Bubble\MonoGame\Embed\SysFont\100.png</Link>
+    </Content>
+    <Content Include="..\..\..\MonoGame\src\dep\Embed\SysFont\101.png">
+      <Link>Dependencies\Bubble\MonoGame\Embed\SysFont\101.png</Link>
+    </Content>
+    <Content Include="..\..\..\MonoGame\src\dep\Embed\SysFont\102.png">
+      <Link>Dependencies\Bubble\MonoGame\Embed\SysFont\102.png</Link>
+    </Content>
+    <Content Include="..\..\..\MonoGame\src\dep\Embed\SysFont\103.png">
+      <Link>Dependencies\Bubble\MonoGame\Embed\SysFont\103.png</Link>
+    </Content>
+    <Content Include="..\..\..\MonoGame\src\dep\Embed\SysFont\104.png">
+      <Link>Dependencies\Bubble\MonoGame\Embed\SysFont\104.png</Link>
+    </Content>
+    <Content Include="..\..\..\MonoGame\src\dep\Embed\SysFont\105.png">
+      <Link>Dependencies\Bubble\MonoGame\Embed\SysFont\105.png</Link>
+    </Content>
+    <Content Include="..\..\..\MonoGame\src\dep\Embed\SysFont\106.png">
+      <Link>Dependencies\Bubble\MonoGame\Embed\SysFont\106.png</Link>
+    </Content>
+    <Content Include="..\..\..\MonoGame\src\dep\Embed\SysFont\107.png">
+      <Link>Dependencies\Bubble\MonoGame\Embed\SysFont\107.png</Link>
+    </Content>
+    <Content Include="..\..\..\MonoGame\src\dep\Embed\SysFont\108.png">
+      <Link>Dependencies\Bubble\MonoGame\Embed\SysFont\108.png</Link>
+    </Content>
+    <Content Include="..\..\..\MonoGame\src\dep\Embed\SysFont\109.png">
+      <Link>Dependencies\Bubble\MonoGame\Embed\SysFont\109.png</Link>
+    </Content>
+    <Content Include="..\..\..\MonoGame\src\dep\Embed\SysFont\110.png">
+      <Link>Dependencies\Bubble\MonoGame\Embed\SysFont\110.png</Link>
+    </Content>
+    <Content Include="..\..\..\MonoGame\src\dep\Embed\SysFont\111.png">
+      <Link>Dependencies\Bubble\MonoGame\Embed\SysFont\111.png</Link>
+    </Content>
+    <Content Include="..\..\..\MonoGame\src\dep\Embed\SysFont\112.png">
+      <Link>Dependencies\Bubble\MonoGame\Embed\SysFont\112.png</Link>
+    </Content>
+    <Content Include="..\..\..\MonoGame\src\dep\Embed\SysFont\113.png">
+      <Link>Dependencies\Bubble\MonoGame\Embed\SysFont\113.png</Link>
+    </Content>
+    <Content Include="..\..\..\MonoGame\src\dep\Embed\SysFont\114.png">
+      <Link>Dependencies\Bubble\MonoGame\Embed\SysFont\114.png</Link>
+    </Content>
+    <Content Include="..\..\..\MonoGame\src\dep\Embed\SysFont\115.png">
+      <Link>Dependencies\Bubble\MonoGame\Embed\SysFont\115.png</Link>
+    </Content>
+    <Content Include="..\..\..\MonoGame\src\dep\Embed\SysFont\116.png">
+      <Link>Dependencies\Bubble\MonoGame\Embed\SysFont\116.png</Link>
+    </Content>
+    <Content Include="..\..\..\MonoGame\src\dep\Embed\SysFont\117.png">
+      <Link>Dependencies\Bubble\MonoGame\Embed\SysFont\117.png</Link>
+    </Content>
+    <Content Include="..\..\..\MonoGame\src\dep\Embed\SysFont\118.png">
+      <Link>Dependencies\Bubble\MonoGame\Embed\SysFont\118.png</Link>
+    </Content>
+    <Content Include="..\..\..\MonoGame\src\dep\Embed\SysFont\119.png">
+      <Link>Dependencies\Bubble\MonoGame\Embed\SysFont\119.png</Link>
+    </Content>
+    <Content Include="..\..\..\MonoGame\src\dep\Embed\SysFont\120.png">
+      <Link>Dependencies\Bubble\MonoGame\Embed\SysFont\120.png</Link>
+    </Content>
+    <Content Include="..\..\..\MonoGame\src\dep\Embed\SysFont\121.png">
+      <Link>Dependencies\Bubble\MonoGame\Embed\SysFont\121.png</Link>
+    </Content>
+    <Content Include="..\..\..\MonoGame\src\dep\Embed\SysFont\122.png">
+      <Link>Dependencies\Bubble\MonoGame\Embed\SysFont\122.png</Link>
+    </Content>
+    <Content Include="..\..\..\MonoGame\src\dep\Embed\SysFont\123.png">
+      <Link>Dependencies\Bubble\MonoGame\Embed\SysFont\123.png</Link>
+    </Content>
+    <Content Include="..\..\..\MonoGame\src\dep\Embed\SysFont\124.png">
+      <Link>Dependencies\Bubble\MonoGame\Embed\SysFont\124.png</Link>
+    </Content>
+    <Content Include="..\..\..\MonoGame\src\dep\Embed\SysFont\125.png">
+      <Link>Dependencies\Bubble\MonoGame\Embed\SysFont\125.png</Link>
+    </Content>
+    <Content Include="..\..\..\MonoGame\src\dep\Embed\SysFont\126.png">
+      <Link>Dependencies\Bubble\MonoGame\Embed\SysFont\126.png</Link>
+    </Content>
+    <Content Include="..\..\..\MonoGame\src\dep\Embed\SysFont\33.png">
+      <Link>Dependencies\Bubble\MonoGame\Embed\SysFont\33.png</Link>
+    </Content>
+    <Content Include="..\..\..\MonoGame\src\dep\Embed\SysFont\34.png">
+      <Link>Dependencies\Bubble\MonoGame\Embed\SysFont\34.png</Link>
+    </Content>
+    <Content Include="..\..\..\MonoGame\src\dep\Embed\SysFont\35.png">
+      <Link>Dependencies\Bubble\MonoGame\Embed\SysFont\35.png</Link>
+    </Content>
+    <Content Include="..\..\..\MonoGame\src\dep\Embed\SysFont\36.png">
+      <Link>Dependencies\Bubble\MonoGame\Embed\SysFont\36.png</Link>
+    </Content>
+    <Content Include="..\..\..\MonoGame\src\dep\Embed\SysFont\37.png">
+      <Link>Dependencies\Bubble\MonoGame\Embed\SysFont\37.png</Link>
+    </Content>
+    <Content Include="..\..\..\MonoGame\src\dep\Embed\SysFont\38.png">
+      <Link>Dependencies\Bubble\MonoGame\Embed\SysFont\38.png</Link>
+    </Content>
+    <Content Include="..\..\..\MonoGame\src\dep\Embed\SysFont\39.png">
+      <Link>Dependencies\Bubble\MonoGame\Embed\SysFont\39.png</Link>
+    </Content>
+    <Content Include="..\..\..\MonoGame\src\dep\Embed\SysFont\40.png">
+      <Link>Dependencies\Bubble\MonoGame\Embed\SysFont\40.png</Link>
+    </Content>
+    <Content Include="..\..\..\MonoGame\src\dep\Embed\SysFont\41.png">
+      <Link>Dependencies\Bubble\MonoGame\Embed\SysFont\41.png</Link>
+    </Content>
+    <Content Include="..\..\..\MonoGame\src\dep\Embed\SysFont\42.png">
+      <Link>Dependencies\Bubble\MonoGame\Embed\SysFont\42.png</Link>
+    </Content>
+    <Content Include="..\..\..\MonoGame\src\dep\Embed\SysFont\43.png">
+      <Link>Dependencies\Bubble\MonoGame\Embed\SysFont\43.png</Link>
+    </Content>
+    <Content Include="..\..\..\MonoGame\src\dep\Embed\SysFont\44.png">
+      <Link>Dependencies\Bubble\MonoGame\Embed\SysFont\44.png</Link>
+    </Content>
+    <Content Include="..\..\..\MonoGame\src\dep\Embed\SysFont\45.png">
+      <Link>Dependencies\Bubble\MonoGame\Embed\SysFont\45.png</Link>
+    </Content>
+    <Content Include="..\..\..\MonoGame\src\dep\Embed\SysFont\46.png">
+      <Link>Dependencies\Bubble\MonoGame\Embed\SysFont\46.png</Link>
+    </Content>
+    <Content Include="..\..\..\MonoGame\src\dep\Embed\SysFont\47.png">
+      <Link>Dependencies\Bubble\MonoGame\Embed\SysFont\47.png</Link>
+    </Content>
+    <Content Include="..\..\..\MonoGame\src\dep\Embed\SysFont\48.png">
+      <Link>Dependencies\Bubble\MonoGame\Embed\SysFont\48.png</Link>
+    </Content>
+    <Content Include="..\..\..\MonoGame\src\dep\Embed\SysFont\49.png">
+      <Link>Dependencies\Bubble\MonoGame\Embed\SysFont\49.png</Link>
+    </Content>
+    <Content Include="..\..\..\MonoGame\src\dep\Embed\SysFont\50.png">
+      <Link>Dependencies\Bubble\MonoGame\Embed\SysFont\50.png</Link>
+    </Content>
+    <Content Include="..\..\..\MonoGame\src\dep\Embed\SysFont\51.png">
+      <Link>Dependencies\Bubble\MonoGame\Embed\SysFont\51.png</Link>
+    </Content>
+    <Content Include="..\..\..\MonoGame\src\dep\Embed\SysFont\52.png">
+      <Link>Dependencies\Bubble\MonoGame\Embed\SysFont\52.png</Link>
+    </Content>
+    <Content Include="..\..\..\MonoGame\src\dep\Embed\SysFont\53.png">
+      <Link>Dependencies\Bubble\MonoGame\Embed\SysFont\53.png</Link>
+    </Content>
+    <Content Include="..\..\..\MonoGame\src\dep\Embed\SysFont\54.png">
+      <Link>Dependencies\Bubble\MonoGame\Embed\SysFont\54.png</Link>
+    </Content>
+    <Content Include="..\..\..\MonoGame\src\dep\Embed\SysFont\55.png">
+      <Link>Dependencies\Bubble\MonoGame\Embed\SysFont\55.png</Link>
+    </Content>
+    <Content Include="..\..\..\MonoGame\src\dep\Embed\SysFont\56.png">
+      <Link>Dependencies\Bubble\MonoGame\Embed\SysFont\56.png</Link>
+    </Content>
+    <Content Include="..\..\..\MonoGame\src\dep\Embed\SysFont\57.png">
+      <Link>Dependencies\Bubble\MonoGame\Embed\SysFont\57.png</Link>
+    </Content>
+    <Content Include="..\..\..\MonoGame\src\dep\Embed\SysFont\58.png">
+      <Link>Dependencies\Bubble\MonoGame\Embed\SysFont\58.png</Link>
+    </Content>
+    <Content Include="..\..\..\MonoGame\src\dep\Embed\SysFont\59.png">
+      <Link>Dependencies\Bubble\MonoGame\Embed\SysFont\59.png</Link>
+    </Content>
+    <Content Include="..\..\..\MonoGame\src\dep\Embed\SysFont\60.png">
+      <Link>Dependencies\Bubble\MonoGame\Embed\SysFont\60.png</Link>
+    </Content>
+    <Content Include="..\..\..\MonoGame\src\dep\Embed\SysFont\61.png">
+      <Link>Dependencies\Bubble\MonoGame\Embed\SysFont\61.png</Link>
+    </Content>
+    <Content Include="..\..\..\MonoGame\src\dep\Embed\SysFont\62.png">
+      <Link>Dependencies\Bubble\MonoGame\Embed\SysFont\62.png</Link>
+    </Content>
+    <Content Include="..\..\..\MonoGame\src\dep\Embed\SysFont\63.png">
+      <Link>Dependencies\Bubble\MonoGame\Embed\SysFont\63.png</Link>
+    </Content>
+    <Content Include="..\..\..\MonoGame\src\dep\Embed\SysFont\64.png">
+      <Link>Dependencies\Bubble\MonoGame\Embed\SysFont\64.png</Link>
+    </Content>
+    <Content Include="..\..\..\MonoGame\src\dep\Embed\SysFont\65.png">
+      <Link>Dependencies\Bubble\MonoGame\Embed\SysFont\65.png</Link>
+    </Content>
+    <Content Include="..\..\..\MonoGame\src\dep\Embed\SysFont\66.png">
+      <Link>Dependencies\Bubble\MonoGame\Embed\SysFont\66.png</Link>
+    </Content>
+    <Content Include="..\..\..\MonoGame\src\dep\Embed\SysFont\67.png">
+      <Link>Dependencies\Bubble\MonoGame\Embed\SysFont\67.png</Link>
+    </Content>
+    <Content Include="..\..\..\MonoGame\src\dep\Embed\SysFont\68.png">
+      <Link>Dependencies\Bubble\MonoGame\Embed\SysFont\68.png</Link>
+    </Content>
+    <Content Include="..\..\..\MonoGame\src\dep\Embed\SysFont\69.png">
+      <Link>Dependencies\Bubble\MonoGame\Embed\SysFont\69.png</Link>
+    </Content>
+    <Content Include="..\..\..\MonoGame\src\dep\Embed\SysFont\70.png">
+      <Link>Dependencies\Bubble\MonoGame\Embed\SysFont\70.png</Link>
+    </Content>
+    <Content Include="..\..\..\MonoGame\src\dep\Embed\SysFont\71.png">
+      <Link>Dependencies\Bubble\MonoGame\Embed\SysFont\71.png</Link>
+    </Content>
+    <Content Include="..\..\..\MonoGame\src\dep\Embed\SysFont\72.png">
+      <Link>Dependencies\Bubble\MonoGame\Embed\SysFont\72.png</Link>
+    </Content>
+    <Content Include="..\..\..\MonoGame\src\dep\Embed\SysFont\73.png">
+      <Link>Dependencies\Bubble\MonoGame\Embed\SysFont\73.png</Link>
+    </Content>
+    <Content Include="..\..\..\MonoGame\src\dep\Embed\SysFont\74.png">
+      <Link>Dependencies\Bubble\MonoGame\Embed\SysFont\74.png</Link>
+    </Content>
+    <Content Include="..\..\..\MonoGame\src\dep\Embed\SysFont\75.png">
+      <Link>Dependencies\Bubble\MonoGame\Embed\SysFont\75.png</Link>
+    </Content>
+    <Content Include="..\..\..\MonoGame\src\dep\Embed\SysFont\76.png">
+      <Link>Dependencies\Bubble\MonoGame\Embed\SysFont\76.png</Link>
+    </Content>
+    <Content Include="..\..\..\MonoGame\src\dep\Embed\SysFont\77.png">
+      <Link>Dependencies\Bubble\MonoGame\Embed\SysFont\77.png</Link>
+    </Content>
+    <Content Include="..\..\..\MonoGame\src\dep\Embed\SysFont\78.png">
+      <Link>Dependencies\Bubble\MonoGame\Embed\SysFont\78.png</Link>
+    </Content>
+    <Content Include="..\..\..\MonoGame\src\dep\Embed\SysFont\79.png">
+      <Link>Dependencies\Bubble\MonoGame\Embed\SysFont\79.png</Link>
+    </Content>
+    <Content Include="..\..\..\MonoGame\src\dep\Embed\SysFont\80.png">
+      <Link>Dependencies\Bubble\MonoGame\Embed\SysFont\80.png</Link>
+    </Content>
+    <Content Include="..\..\..\MonoGame\src\dep\Embed\SysFont\81.png">
+      <Link>Dependencies\Bubble\MonoGame\Embed\SysFont\81.png</Link>
+    </Content>
+    <Content Include="..\..\..\MonoGame\src\dep\Embed\SysFont\82.png">
+      <Link>Dependencies\Bubble\MonoGame\Embed\SysFont\82.png</Link>
+    </Content>
+    <Content Include="..\..\..\MonoGame\src\dep\Embed\SysFont\83.png">
+      <Link>Dependencies\Bubble\MonoGame\Embed\SysFont\83.png</Link>
+    </Content>
+    <Content Include="..\..\..\MonoGame\src\dep\Embed\SysFont\84.png">
+      <Link>Dependencies\Bubble\MonoGame\Embed\SysFont\84.png</Link>
+    </Content>
+    <Content Include="..\..\..\MonoGame\src\dep\Embed\SysFont\85.png">
+      <Link>Dependencies\Bubble\MonoGame\Embed\SysFont\85.png</Link>
+    </Content>
+    <Content Include="..\..\..\MonoGame\src\dep\Embed\SysFont\86.png">
+      <Link>Dependencies\Bubble\MonoGame\Embed\SysFont\86.png</Link>
+    </Content>
+    <Content Include="..\..\..\MonoGame\src\dep\Embed\SysFont\87.png">
+      <Link>Dependencies\Bubble\MonoGame\Embed\SysFont\87.png</Link>
+    </Content>
+    <Content Include="..\..\..\MonoGame\src\dep\Embed\SysFont\88.png">
+      <Link>Dependencies\Bubble\MonoGame\Embed\SysFont\88.png</Link>
+    </Content>
+    <Content Include="..\..\..\MonoGame\src\dep\Embed\SysFont\89.png">
+      <Link>Dependencies\Bubble\MonoGame\Embed\SysFont\89.png</Link>
+    </Content>
+    <Content Include="..\..\..\MonoGame\src\dep\Embed\SysFont\90.png">
+      <Link>Dependencies\Bubble\MonoGame\Embed\SysFont\90.png</Link>
+    </Content>
+    <Content Include="..\..\..\MonoGame\src\dep\Embed\SysFont\91.png">
+      <Link>Dependencies\Bubble\MonoGame\Embed\SysFont\91.png</Link>
+    </Content>
+    <Content Include="..\..\..\MonoGame\src\dep\Embed\SysFont\92.png">
+      <Link>Dependencies\Bubble\MonoGame\Embed\SysFont\92.png</Link>
+    </Content>
+    <Content Include="..\..\..\MonoGame\src\dep\Embed\SysFont\93.png">
+      <Link>Dependencies\Bubble\MonoGame\Embed\SysFont\93.png</Link>
+    </Content>
+    <Content Include="..\..\..\MonoGame\src\dep\Embed\SysFont\94.png">
+      <Link>Dependencies\Bubble\MonoGame\Embed\SysFont\94.png</Link>
+    </Content>
+    <Content Include="..\..\..\MonoGame\src\dep\Embed\SysFont\95.png">
+      <Link>Dependencies\Bubble\MonoGame\Embed\SysFont\95.png</Link>
+    </Content>
+    <Content Include="..\..\..\MonoGame\src\dep\Embed\SysFont\96.png">
+      <Link>Dependencies\Bubble\MonoGame\Embed\SysFont\96.png</Link>
+    </Content>
+    <Content Include="..\..\..\MonoGame\src\dep\Embed\SysFont\97.png">
+      <Link>Dependencies\Bubble\MonoGame\Embed\SysFont\97.png</Link>
+    </Content>
+    <Content Include="..\..\..\MonoGame\src\dep\Embed\SysFont\98.png">
+      <Link>Dependencies\Bubble\MonoGame\Embed\SysFont\98.png</Link>
+    </Content>
+    <Content Include="..\..\..\MonoGame\src\dep\Embed\SysFont\99.png">
+      <Link>Dependencies\Bubble\MonoGame\Embed\SysFont\99.png</Link>
+    </Content>
     <Content Include="Icon.ico" />
   </ItemGroup>
   <ItemGroup>
