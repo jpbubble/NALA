@@ -148,7 +148,7 @@ class RPGCharacter
 		self.TagMap[charTag] = self
 		setmetatable(self.Data,{
 			['__newindex'] = void(t, string k, string v)
-				NALA_RPG:SeChartData(self.ChTag,k,v)
+				NALA_RPG:SetCharData(self.ChTag,k,v)
 			end,
 			['__index'] = string(t, string k)
 				return NALA_RPG:GetCharData(self.ChTag,k)
