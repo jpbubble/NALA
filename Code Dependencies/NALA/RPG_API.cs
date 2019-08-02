@@ -96,7 +96,7 @@ namespace NALA {
                                 SBubble.MyError("Statistics calculation script error", $"Cyclic stat call for SUM or AVG {stattag}", $"{SBubble.TraceLua(statename)}\n\nFull Script Request:{st.ScriptFile}");
                                 return 0;
                             }
-                            Total = +GetStatValue(chrtag, calcStat);
+                            Total += GetStatValue(chrtag, calcStat);
                         }
                         switch (Kind) {
                             case "SUM": st.Value = Total; break;
