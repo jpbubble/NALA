@@ -138,7 +138,7 @@ namespace NALA {
             var ch = RPG.GrabChar(chrtag); if (ch == null) { SBubble.MyError($"ChkPoints(\"{chrtag}\",\"{pnttag}\"):", "Character doesn't exist!", SBubble.TraceLua(statename)); return; }
             var pt = ch.Point(pnttag, createifneeded); if (pt == null) { SBubble.MyError($"ChkPoints(\"{chrtag}\",\"{pnttag}\"):", "Points record doesn't exist!", SBubble.TraceLua(statename)); return; }
             if (pt.MaxCopy != "") {
-                SBubble.MyError($"ChkPoints(\"{chrtag}\",\"{pnttag}\"):", "MaxCopy based points cannot have their maximum value manually altered", SBubble.TraceLua(statename));
+                SBubble.MyError($"ChkPoints(\"{chrtag}\",\"{pnttag}\"):", "MaxCopy based points cannot have their maximum value manually altered", $"{SBubble.TraceLua(statename)}\n\nMaxCopy = \"{pt.MaxCopy}\";");
                 return;
             }
             if (pt.Minimum > pt.Maximum) {
