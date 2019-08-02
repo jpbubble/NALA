@@ -91,7 +91,13 @@ namespace NALA {
                 case "AVG": {
                         var Stats = Formula.Split(',');
                         var Total = 0;
-                        foreach (string calcStat in Stats) Total = +GetStatValue(chrtag, calcStat);
+                        foreach (string calcStat in Stats) {
+                            if (calcStat==stattag) {
+                                SBubble.MyError("Statistics calculation script error", $"Cyclic stat call for SUM or AVG {stattag}", $"{SBubble.TraceLua(statename)}\n\nFull Script Request:{st.ScriptFile}");
+                                return 0;
+                            }
+                            Total = +GetStatValue(chrtag, calcStat);
+                        }
                         switch (Kind) {
                             case "SUM": st.Value = Total; break;
                             case "AVG": st.Value = (int)Math.Floor((decimal)Total / (decimal)Stats.Length); break;
