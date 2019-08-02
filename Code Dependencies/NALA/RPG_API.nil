@@ -55,7 +55,8 @@ class RPGStat
 	
 	static var GetStat(string ch,string stat)
 		string t
-		t = string.format("%s::%s",RPGStat.ChTag,RPGStat.StTag)
+		//t = string.format("%s::%s",RPGStat.ChTag,RPGStat.StTag)
+		t = string.format("%s::%s",ch,stat)
 		return RPGStat.TagMap[t]
 	end
 	
@@ -125,11 +126,10 @@ class RPGPoints
 		return NALA_RPG:GetMaxCopyPoints(self.ChTag,self.PtTag,false)
 	end
 	
-	
-	void CONSTRUCTOR(string Char,string Pnt, bool CreateIfNonExistent)
-		NALA_RPG:ChkPoints(Char,Pnt,CreateIfNonExistent)
+	void CONSTRUCTOR(string Char,string Pnt, CreateIfNonExistent)
+		NALA_RPG:ChkPoints(Char,Pnt,CreateIfNonExistent==true)
 		self.ChTag = Char
-		self.ptTag = Pnt
+		self.PtTag = Pnt
 		self.TagMap[self.Tag] = self
 		//-- Please note, when this goes wrong, the program will crash out anyway, so the class creation doesn't hurt at all!
 	end
@@ -165,6 +165,7 @@ class RPGCharacter
 		if mustexist 
 			assert(NALA_RPG:StatExists(self.ChTag,Stat),string.format("Character %s doesn't have stat %s",self.ChTag,Stat))
 		elseif not NALA_RPG:StatExists(self.ChTag,Stat)
+			CSay(string.format("Creating stat %s for %s",Stat,self.ChTag) ) // debug line
 			NALA_RPG:CreateStat(self.ChTag,Stat,true)
 		end
 		if not RPGStat.Static_Has(self.ChTag,Stat)
@@ -177,7 +178,7 @@ class RPGCharacter
 		var tag
 		tag = string.format("%s::%s",self.ChTag,Pnt)
 		if not RPGPoints.TagMap[tag] then
-			new RPGPoints(Pnt,CreateIfNonExistent==true)
+			new RPGPoints(self.ChTag,Pnt,CreateIfNonExistent==true)
 		end
 		return RPGPoints.TagMap[tag]
 	end
