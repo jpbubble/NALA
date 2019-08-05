@@ -21,8 +21,9 @@
 // Please note that some references to data like pictures or audio, do not automatically
 // fall under this licenses. Mostly this is noted in the respective files.
 // 
-// Version: 19.07.12
+// Version: 19.08.05
 // EndLic
+
 
 #undef FATAL_GAMEJOLT
 
@@ -147,6 +148,7 @@ namespace NALA {
         }
     }
 }
+
 
 
 
