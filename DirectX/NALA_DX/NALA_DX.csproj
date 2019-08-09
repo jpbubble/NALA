@@ -184,6 +184,9 @@
     <Compile Include="..\..\..\..\TQMG\TQMG.cs">
       <Link>Dependencies\Tricky%27s Units\TQMG.cs</Link>
     </Compile>
+    <None Include="..\..\..\..\TrickyUnits\BlitzBank.cs">
+      <Link>Dependencies\Tricky%27s Units\BlitzBank.cs</Link>
+    </None>
     <Compile Include="..\..\..\..\TrickyUnits\Dirry.cs">
       <Link>Dependencies\Tricky%27s Units\Dirry.cs</Link>
     </Compile>
@@ -252,6 +255,9 @@
     </Compile>
     <Compile Include="..\..\..\MonoGame\src\dep\Bubble\Class\Bubble_Input.cs">
       <Link>Dependencies\Bubble\MonoGame\API Class\Bubble_Input.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\MonoGame\src\dep\Bubble\Class\Bubble_Timers.cs">
+      <Link>Dependencies\Bubble\MonoGame\API Class\Bubble_Timers.cs</Link>
     </Compile>
     <Compile Include="..\..\..\MonoGame\src\Flow\AlgemeneFlowManager.cs">
       <Link>Dependencies\Bubble\MonoGame\Flow\AlgemeneFlowManager.cs</Link>

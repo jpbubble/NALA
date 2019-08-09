@@ -116,7 +116,7 @@ namespace NALA {
         /// </summary>
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Update(GameTime gameTime) {
-
+            BubbleTimer.UpdateTime = gameTime.ElapsedGameTime.Milliseconds;
 
             Bubble_Input.MouseHitUpdate();
             FlowManager.Update(gameTime);
@@ -135,12 +135,17 @@ namespace NALA {
         /// </summary>
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Draw(GameTime gameTime) {
+            BubbleTimer.DrawTime = gameTime.ElapsedGameTime.Milliseconds;
             GraphicsDevice.Clear(Color.Black);
             spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.NonPremultiplied, SamplerState.LinearWrap, null, null); //DepthStencilState.Default
             //spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, SamplerState.LinearWrap, DepthStencilState.Default, null);
 
             FlowManager.Draw(gameTime);
 
+            if (BubbleTimer.ShowTime) {
+                TQMG.Color(255, 255, 255);
+                SysFont.DrawText($"Update: {BubbleTimer.UpdateTime}ms/{1000 / BubbleTimer.UpdateTime}fps; Draw: {BubbleTimer.DrawTime}ms/{1000 / BubbleTimer.DrawTime}fps", 5, 5);
+            }
             spriteBatch.End();
 
             base.Draw(gameTime);
