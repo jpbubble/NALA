@@ -18,6 +18,12 @@
 // 3. This notice may not be removed or altered from any source distribution.
 // End License Information
 
+
+string trimstring(string s)
+  return (s:gsub("^%s*(.-)%s*$", "%1"))
+end
+
+
 table RPGParty
 setmetatable(RPGParty,{
 	["__newindex"] = void(t,key, value)
@@ -176,7 +182,11 @@ class RPGCharacter
 		})
 	end
 	
-	static var GetChar(Tag)
+	static var GetChar(string Tag)
+		Tag = trimstring(Tag)
+		if (not RPGCharacter.TagMap[Tag]) and NALA_RPG:CharExists(Tag)
+			new RPGCharacter(Tag)
+		end
 		assert(RPGCharacter.TagMap[Tag] and NALA_RPG:CharExists(Tag),string.format("Requested character '%s' does not exist",Tag))
 		return RPGCharacter.TagMap[Tag]
 	end
@@ -227,7 +237,7 @@ group RPG
 		return new RPGCharacter(tag)
 	end
 	
-	var Char(tag)
+	var Char(string tag)
 		return RPGCharacter.GetChar(tag)
 	end
 	

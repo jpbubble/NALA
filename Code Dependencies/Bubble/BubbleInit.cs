@@ -57,6 +57,12 @@ namespace NALA {
             SBubble.AddInit(BubbleTimer.Init);
             #endregion
 
+            #region Extras to use in savegames
+            Bubble_Save.SaveXtra["RPGPARTY"] = delegate (UseJCR6.TJCRCreate j, string dir) {
+                RPG.RPGSave(j, $"XTRA/{dir}");
+            };
+            #endregion
+
             #region The stuff needed for NALA in particular
             // Own APIs for NIL and Lua
             //SBubble.AddInit(MapScriptAPI.API_Init);
