@@ -220,6 +220,9 @@
     <Compile Include="..\..\..\..\TrickyUnits\RPGStats.cs">
       <Link>Dependencies\Tricky%27s Units\RPGStats.cs</Link>
     </Compile>
+    <Compile Include="..\..\..\..\TrickyUnits\Swap.cs">
+      <Link>Dependencies\Tricky%27s Units\Swap.cs</Link>
+    </Compile>
     <Compile Include="..\..\..\AdvancedLibraries\Bubble_Swap.cs">
       <Link>Dependencies\NALA\Bubble_Swap.cs</Link>
     </Compile>
