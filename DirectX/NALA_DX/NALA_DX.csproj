@@ -224,7 +224,7 @@
       <Link>Dependencies\Tricky%27s Units\Swap.cs</Link>
     </Compile>
     <Compile Include="..\..\..\AdvancedLibraries\Bubble_Swap.cs">
-      <Link>Dependencies\NALA\Bubble_Swap.cs</Link>
+      <Link>Dependencies\NALA\Xtra\Bubble_Swap.cs</Link>
     </Compile>
     <Compile Include="..\..\..\Game Jolt\Game Jolt.cs">
       <Link>Dependencies\Game Jolt\API\Game Jolt.cs</Link>
@@ -655,9 +655,9 @@
     <EmbeddedResource Include="..\..\..\Libraries\BubbleSuperGlobal.lua">
       <Link>Dependencies\Bubble\Main\Script\BubbleSuperGlobal.lua</Link>
     </EmbeddedResource>
-    <None Include="..\..\..\AdvancedLibraries\Bubble_Swap.nil">
-      <Link>Dependencies\NALA\Bubble_Swap.nil</Link>
-    </None>
+    <EmbeddedResource Include="..\..\..\AdvancedLibraries\Bubble_Swap.nil">
+      <Link>Dependencies\NALA\Xtra\Bubble_Swap.nil</Link>
+    </EmbeddedResource>
     <None Include="app.manifest" />
     <None Include="packages.config" />
   </ItemGroup>

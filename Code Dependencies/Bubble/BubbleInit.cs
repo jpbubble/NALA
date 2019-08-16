@@ -55,12 +55,14 @@ namespace NALA {
             SBubble.AddInit(Bubble_Conf.Init);
             SBubble.AddInit(Bubble_GameJolt.Init);
             SBubble.AddInit(BubbleTimer.Init);
+            SBubble.AddInit(Bubble_Swap.Init);
             #endregion
 
             #region Extras to use in savegames
             Bubble_Save.SaveXtra["RPGPARTY"] = delegate (UseJCR6.TJCRCreate j, string dir) {
                 RPG.RPGSave(j, $"XTRA/{dir}");
             };
+            Bubble_Save.SaveXtra["SWAP"] = Bubble_Swap.SwapSave;
             #endregion
 
             #region The stuff needed for NALA in particular
