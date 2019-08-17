@@ -62,7 +62,12 @@ namespace NALA {
             Bubble_Save.SaveXtra["RPGPARTY"] = delegate (UseJCR6.TJCRCreate j, string dir) {
                 RPG.RPGSave(j, $"XTRA/{dir}");
             };
+            Bubble_Save.LoadXtra["RPGPARTY"] = delegate (UseJCR6.TJCRDIR j, string dir) {
+                RPG.RPGLoad(j, $"XTRA/{dir}");
+                return true;
+            };
             Bubble_Save.SaveXtra["SWAP"] = Bubble_Swap.SwapSave;
+            Bubble_Save.LoadXtra["SWAP"] = Bubble_Swap.SwapLoad;
             #endregion
 
             #region The stuff needed for NALA in particular
