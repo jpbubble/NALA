@@ -152,6 +152,15 @@ class RPGPoints
 		return NALA_RPG:GetMaxCopyPoints(self.ChTag,self.PtTag,false)
 	end
 	
+	void Inc(int v)
+		self.Have = self.Have + v
+	end
+	
+	void Dec(int v)
+		self.Have = self.Have - v
+	end
+		
+	
 	void CONSTRUCTOR(string Char,string Pnt, CreateIfNonExistent)
 		NALA_RPG:ChkPoints(Char,Pnt,CreateIfNonExistent==true)
 		self.ChTag = Char
