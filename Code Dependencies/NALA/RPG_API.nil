@@ -18,11 +18,22 @@
 // 3. This notice may not be removed or altered from any source distribution.
 // End License Information
 
-
 string trimstring(string s)
   return (s:gsub("^%s*(.-)%s*$", "%1"))
 end
 
+var rpgsstringsplit(string inputstr, string sep)
+        if sep == nil then
+                sep = "%s"
+        end
+        table t
+        int i=1
+        for str in string.gmatch(inputstr, "([^"..sep.."]+)") do
+                t[i] = str
+                i = i + 1
+        end
+        return t
+end
 
 table RPGParty
 setmetatable(RPGParty,{
@@ -196,7 +207,7 @@ class RPGCharacter
 		if (not RPGCharacter.TagMap[Tag]) and NALA_RPG:CharExists(Tag)
 			new RPGCharacter(Tag)
 		end
-		assert(RPGCharacter.TagMap[Tag] and NALA_RPG:CharExists(Tag),string.format("Requested character '%s' does not exist",Tag))
+		assert(RPGCharacter.TagMap[Tag] and NALA_RPG:CharExists(Tag),string.format("Requested character '%s' does not exist\n\n%s",Tag,debug.traceback()))
 		return RPGCharacter.TagMap[Tag]
 	end
 	
@@ -248,6 +259,24 @@ group RPG
 	
 	var Char(string tag)
 		return RPGCharacter.GetChar(tag)
+	end
+	
+	get table Chars
+		return rpgsstringsplit(NALA_RPG:CharListString(),";")
+	end
+	
+	get var EachChar
+		int i = 0
+		table ch
+		ch = self.Chars
+		return string()
+			i++
+			return ch[i]
+		end
+	end
+	
+	var KillChar(string key)
+		NALA_RPG:KillChar(key)
 	end
 	
 	void CONSTRUCTOR()

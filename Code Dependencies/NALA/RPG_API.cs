@@ -221,6 +221,20 @@ namespace NALA {
             pt.Maximum = GetStatValue(chrtag, pt.MaxCopy);
         }
 
+        public string CharListString(string sep = ";") {
+            var ret = new StringBuilder();
+            var dosep = false;
+            foreach(string ch in RPG.RPGChars.Keys) {
+                if (dosep) ret.Append(sep); dosep = true;
+                ret.Append(ch);
+            }
+            return ret.ToString();
+        }
+
+        public void KillChar(string chrtag) {
+            RPG.RPGChars.Kill(chrtag);
+        }
+
         #endregion
         #region Name
         public void SetName(string chrtag, string Name) {

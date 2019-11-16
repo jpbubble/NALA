@@ -47,20 +47,30 @@ namespace NALA {
         public static NALACore Core { get; private set; } = null;
 
         public NALACore() {
-            graphics = new GraphicsDeviceManager(this);
-            Content.RootDirectory = "Content";
-            Core = this;
+            try {
+                graphics = new GraphicsDeviceManager(this);
+                Content.RootDirectory = "Content";
+                Core = this;
 
-            UseJCR6.BubbleInit.Init();
-            Dirry.InitAltDrives();
+                Dirry.InitAltDrives();
+                UseJCR6.BubbleInit.Init();
 #if !DEBUG
             graphics.HardwareModeSwitch = false;
             graphics.IsFullScreen = true; 
             graphics.ApplyChanges();
 #else
-            graphics.PreferredBackBufferWidth = 1200;
-            graphics.PreferredBackBufferHeight = 1000;
+                graphics.PreferredBackBufferWidth = 1200;
+                graphics.PreferredBackBufferHeight = 1000;
 #endif
+            } catch (System.Exception Allemaal_naar_de_klote) {
+#if DEBUG
+                Confirm.Annoy($"ERROR!\n{Allemaal_naar_de_klote.Message}\n\n{Allemaal_naar_de_klote.StackTrace}\n", "NALA Init error (CO)", System.Windows.Forms.MessageBoxIcon.Error);
+#else
+                Confirm.Annoy($"ERROR!\n{Allemaal_naar_de_klote.Message}\n\nDid you install everything propely, or is the engine broken?\n""NALA Init error (C))",System.Windows.Forms.MessageBoxIcon.Error);
+#endif
+                System.Environment.Exit(10);
+
+            }
         }
 
         /// <summary>
@@ -81,25 +91,35 @@ namespace NALA {
         /// all of your content.
         /// </summary>
         protected override void LoadContent() {
-            // Create a new SpriteBatch, which can be used to draw textures.
-            spriteBatch = new SpriteBatch(GraphicsDevice);
+            try {
+                // Create a new SpriteBatch, which can be used to draw textures.
+                spriteBatch = new SpriteBatch(GraphicsDevice);
 
 
-#region Tricky's Quick Monogame Graphics
-            if (SBubble.JCR == null) System.Diagnostics.Debug.WriteLine("EEP! JCR resource is null! But how?");
-            TQMG.Init(graphics, GraphicsDevice, spriteBatch, SBubble.JCR);
-#endregion
+                #region Tricky's Quick Monogame Graphics
+                if (SBubble.JCR == null) System.Diagnostics.Debug.WriteLine("EEP! JCR resource is null! But how?");
+                TQMG.Init(graphics, GraphicsDevice, spriteBatch, SBubble.JCR);
+                #endregion
 
-            BubbleInit.LetsGo();
+                BubbleInit.LetsGo();
 
-            TrickyGameJolt.GJAPI.ERRORFUNCTION = delegate (string msg) {
+                TrickyGameJolt.GJAPI.ERRORFUNCTION = delegate (string msg) {
 #if FATAL_GAMEJOLT
                 SBubble.MyError("Game Jolt API Error", msg, "");
 #else
-                BubConsole.WriteLine("GAME JOLT ERROR",255,0,0); System.Console.Beep();
-                BubConsole.WriteLine(msg);
+                    BubConsole.WriteLine("GAME JOLT ERROR", 255, 0, 0); System.Console.Beep();
+                    BubConsole.WriteLine(msg);
 #endif
-            };
+                };
+            } catch ( System.Exception Allemaal_naar_de_klote) {
+#if DEBUG
+                Confirm.Annoy($"ERROR!\n{Allemaal_naar_de_klote.Message}\n\n{Allemaal_naar_de_klote.StackTrace}\n","NALA Init error (LC)",System.Windows.Forms.MessageBoxIcon.Error);
+#else
+                Confirm.Annoy($"ERROR!\n{Allemaal_naar_de_klote.Message}\n\nDid you install everything propely, or is the engine broken?\n""NALA Init error (LC)",System.Windows.Forms.MessageBoxIcon.Error);
+#endif
+                System.Environment.Exit(10);
+
+            }
         }
 
         /// <summary>
