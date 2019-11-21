@@ -147,6 +147,14 @@ class RPGPoints
 		NALA_RPG:SetMinPoints(self.ChTag,self.PtTag,value,false)
 	end
 	
+	get number Max
+		return self.Maximum
+	end
+	
+	set number Max
+		self.Maximum = value
+	end
+	
 	set number Have
 		NALA_RPG:SetHavePoints(self.ChTag,self.PtTag,value,false)
 	end

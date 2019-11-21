@@ -66,7 +66,7 @@ namespace NALA {
 #if DEBUG
                 Confirm.Annoy($"ERROR!\n{Allemaal_naar_de_klote.Message}\n\n{Allemaal_naar_de_klote.StackTrace}\n", "NALA Init error (CO)", System.Windows.Forms.MessageBoxIcon.Error);
 #else
-                Confirm.Annoy($"ERROR!\n{Allemaal_naar_de_klote.Message}\n\nDid you install everything propely, or is the engine broken?\n""NALA Init error (C))",System.Windows.Forms.MessageBoxIcon.Error);
+                Confirm.Annoy($"ERROR!\n{Allemaal_naar_de_klote.Message}\n\nDid you install everything propely, or is the engine broken?\n","NALA Init error (C))",System.Windows.Forms.MessageBoxIcon.Error);
 #endif
                 System.Environment.Exit(10);
 
@@ -115,7 +115,7 @@ namespace NALA {
 #if DEBUG
                 Confirm.Annoy($"ERROR!\n{Allemaal_naar_de_klote.Message}\n\n{Allemaal_naar_de_klote.StackTrace}\n","NALA Init error (LC)",System.Windows.Forms.MessageBoxIcon.Error);
 #else
-                Confirm.Annoy($"ERROR!\n{Allemaal_naar_de_klote.Message}\n\nDid you install everything propely, or is the engine broken?\n""NALA Init error (LC)",System.Windows.Forms.MessageBoxIcon.Error);
+                Confirm.Annoy($"ERROR!\n{Allemaal_naar_de_klote.Message}\n\nDid you install everything propely, or is the engine broken?\n","NALA Init error (LC)",System.Windows.Forms.MessageBoxIcon.Error);
 #endif
                 System.Environment.Exit(10);
 
