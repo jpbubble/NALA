@@ -55,7 +55,7 @@ namespace NALA {
             SBubble.AddInit(Bubble_Conf.Init);
             SBubble.AddInit(Bubble_GameJolt.Init);
             SBubble.AddInit(BubbleTimer.Init);
-            SBubble.AddInit(Bubble_Swap.Init);
+            SBubble.AddInit(Bubble_Swap.Init);            
             #endregion
 
             #region Extras to use in savegames
@@ -82,6 +82,7 @@ namespace NALA {
 
             // SBubble Kthura API
             SBubble.AddInit(KthuraBubble.KthuraBubble.Init);
+            SBubble.AddInit(KthuraBubble.KthBlockAPI.Init);
 
             // TODO: API for TeddyBear
             // TODO: API for Swap Data Manager

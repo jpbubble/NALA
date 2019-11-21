@@ -178,6 +178,9 @@
     <Compile Include="..\..\..\..\Kthura\Source\KthuraBubble\KthuraBubble.cs">
       <Link>Dependencies\Kthura\API\KthuraBubble.cs</Link>
     </Compile>
+    <Compile Include="..\..\..\..\Kthura\Source\KthuraBubble\KthuraBubbleBlockMapScreen.cs">
+      <Link>Dependencies\Kthura\DebugFlow\KthuraBubbleBlockMapScreen.cs</Link>
+    </Compile>
     <Compile Include="..\..\..\..\Secu\KiloUtrechtTango.cs">
       <Link>Dependencies\Secu\KiloUtrechtTango.cs</Link>
     </Compile>
