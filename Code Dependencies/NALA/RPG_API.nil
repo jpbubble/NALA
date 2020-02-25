@@ -47,6 +47,11 @@ setmetatable(RPGParty,{
 					case "MAX"
 						assert(type(value)=="number","MAX only accepts a number as value!")
 						NALA_RPG.PartyMax = math.floor(value);
+					case "PARTY"
+						assert(type(value)=="table","PARTY only accepts a table containing a party")
+						for i=1,NALA_RPG.PartyMax do
+							t[1] = value[i] or ""
+						end
 					default
 						error("Unknown field!")
 				end
@@ -188,6 +193,10 @@ class RPGPoints
 		//-- Please note, when this goes wrong, the program will crash out anyway, so the class creation doesn't hurt at all!
 	end
 	
+	void Kill()
+		self.TagMap[self.Tag] = nil;
+	end
+	
 end
 
 class RPGCharacter
@@ -234,7 +243,14 @@ class RPGCharacter
 	
 	var Points(string Pnt, CreateIfNonExistent)
 		var tag
+		string tcheck
+		tcheck = type(CreateIfNonExistent)
+		assert(tcheck=="nil" or tcheck=="boolean","Optional parameter 'CreateIfNonExistent' must be either boolean or not be set at all! Not a "..tcheck)
+		//CSay(string.format("Points('%s',%s) executing!",tostring(Pnt),tostring(CreateIfNonExistent)))
 		tag = string.format("%s::%s",self.ChTag,Pnt)
+		if CreateIfNonExistent and RPGPoints.TagMap[tag] then
+			RPGPoints.TagMap[tag].Kill()
+		end
 		if not RPGPoints.TagMap[tag] then
 			new RPGPoints(self.ChTag,Pnt,CreateIfNonExistent==true)
 		end
@@ -249,6 +265,28 @@ class RPGCharacter
 		return NALA_RPG:GetName(self.ChTag)
 	end
 	
+	get table ListStats
+		string scr
+		delegate f
+		scr = NALA_RPG:ListStats(self.ChTag)
+		f = NIL.Load(scr,"List stat readout for: "..self.ChTag)
+		return f()
+	end
+	
+	get var EachStat
+		table work
+		int i = 0
+		work = self.ListStats
+		table.sort(work)
+		return var()
+			i++
+			if work[i]==nil then
+				return nil,nil;
+			end
+			return work[i],self.Stat(work[i]).Value,self.Stat(work[i])
+		end
+	end
+	
 end
 
 group RPG
@@ -257,6 +295,10 @@ group RPG
 
 	get table Party
 		return RPGParty
+	end
+	
+	set table Party
+		RPGParty.Party = value
 	end
 	
 

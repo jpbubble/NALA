@@ -151,6 +151,9 @@
     <Compile Include="..\..\..\..\JCR6\Drivers\FileTypes\JCR5.cs">
       <Link>Dependencies\JCR6\Drivers\FileTypes\JCR5.cs</Link>
     </Compile>
+    <Compile Include="..\..\..\..\JCR6\Drivers\FileTypes\JQL.cs">
+      <Link>Dependencies\JCR6\Drivers\FileTypes\JQL.cs</Link>
+    </Compile>
     <Compile Include="..\..\..\..\JCR6\Drivers\FileTypes\QuakePAK.cs">
       <Link>Dependencies\JCR6\Drivers\FileTypes\QuakePAK.cs</Link>
     </Compile>
@@ -181,11 +184,17 @@
     <Compile Include="..\..\..\..\Kthura\Source\KthuraBubble\KthuraBubbleBlockMapScreen.cs">
       <Link>Dependencies\Kthura\DebugFlow\KthuraBubbleBlockMapScreen.cs</Link>
     </Compile>
+    <Compile Include="..\..\..\..\Kthura\Source\KthuraBubble\KthuraBubbleGenerator.cs">
+      <Link>Dependencies\Kthura\API\KthuraBubbleGenerator.cs</Link>
+    </Compile>
     <Compile Include="..\..\..\..\Secu\KiloUtrechtTango.cs">
       <Link>Dependencies\Secu\KiloUtrechtTango.cs</Link>
     </Compile>
     <Compile Include="..\..\..\..\TQMG\TQMG.cs">
       <Link>Dependencies\Tricky%27s Units\TQMG.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\TrickyUnits\Bressenham.cs">
+      <Link>Dependencies\Tricky%27s Units\Bressenham.cs</Link>
     </Compile>
     <Compile Include="..\..\..\..\TrickyUnits\Dijkstra.cs">
       <Link>Dependencies\Tricky%27s Units\Dijkstra.cs</Link>
@@ -660,6 +669,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="..\..\..\AdvancedLibraries\Bubble_Swap.nil">
       <Link>Dependencies\NALA\Xtra\Bubble_Swap.nil</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\..\..\..\Kthura\Source\KthuraBubble\KthuraBubbleGenerator.nil">
+      <Link>Dependencies\Kthura\API\KthuraBubbleGenerator.nil</Link>
     </EmbeddedResource>
     <None Include="app.manifest" />
     <None Include="packages.config" />

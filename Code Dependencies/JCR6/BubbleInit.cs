@@ -46,6 +46,8 @@ namespace UseJCR6 {
             JCR6_zlib.Init();
             new JCR6_RealDir();
             new JCR_JCR5();
+            new JCR_QuickLink();
+            new JCR_QuakePack();
             SBubble.Init("NALA", Error.GoError);
         }
     }

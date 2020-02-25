@@ -73,6 +73,22 @@ namespace NALA {
         #endregion
 
         #region Stats
+        public string ListStats(string chrtag) {
+            try {
+                var ret = new StringBuilder("return {");
+                var comma = false;
+                foreach (string s in RPG.GrabChar(chrtag).Stats.Keys) {
+                    if (comma) ret.Append(", "); comma = true;
+                    ret.Append($"\"{s}\"");
+                }
+                ret.Append("}\n");
+                return ret.ToString();
+            } catch (Exception e){
+                SBubble.MyError($"<RPGCHARACTER {chrtag}>.List():", e.Message, SBubble.TraceLua(statename));
+                return "{ \"FOUTJE BEDANKT!\"} ";
+            }
+        }
+
         public bool StatExists(string chrtag, string stattag) {
             if (!CharExists(chrtag)) return false;
             return RPG.GrabChar(chrtag).HasStat(stattag);
@@ -216,7 +232,8 @@ namespace NALA {
 
         public void SetMaxCopyPoints(string chrtag, string pnttag, string value, bool createifneeded) {
             var ch = RPG.GrabChar(chrtag); if (ch == null) { SBubble.MyError($"ChkPoints(\"{chrtag}\",\"{pnttag}\"):", "Character doesn't exist!", SBubble.TraceLua(statename)); return; }
-            var pt = ch.Point(pnttag, createifneeded); if (pt == null) { SBubble.MyError($"ChkPoints(\"{chrtag}\",\"{pnttag}\"):", "Points record doesn't exist!", SBubble.TraceLua(statename)); return; }
+            if (!StatExists(chrtag, value)) { SBubble.MyError($"SetMaxCopyPoints(\"{chrtag}\",\"{pnttag}\",\"{value}\"):", $"Not possible to link to stat: {value}", SBubble.TraceLua(statename)); return; }
+            var pt = ch.Point(pnttag, createifneeded); if (pt == null) { SBubble.MyError($"Points(\"{chrtag}\",\"{pnttag}\",{createifneeded}).MaxCopy = \"{value}\": ", "Points record doesn't exist!", SBubble.TraceLua(statename)); return; }
             pt.MaxCopy = value;
             pt.Maximum = GetStatValue(chrtag, pt.MaxCopy);
         }
