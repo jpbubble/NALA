@@ -83,6 +83,7 @@ namespace NALA {
             // SBubble Kthura API
             SBubble.AddInit(KthuraBubble.KthuraBubble.Init);
             SBubble.AddInit(KthuraBubble.KthBlockAPI.Init);
+            SBubble.AddInit(KthuraBubble.KthuraAbyssGenerator.Init);
 
             // TODO: API for TeddyBear
             // TODO: API for Swap Data Manager

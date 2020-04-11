@@ -229,6 +229,9 @@
     <Compile Include="..\..\..\..\TrickyUnits\qstream.cs">
       <Link>Dependencies\Tricky%27s Units\qstream.cs</Link>
     </Compile>
+    <Compile Include="..\..\..\..\TrickyUnits\Rand.cs">
+      <Link>Dependencies\Tricky%27s Units\Rand.cs</Link>
+    </Compile>
     <Compile Include="..\..\..\..\TrickyUnits\RPGStats.cs">
       <Link>Dependencies\Tricky%27s Units\RPGStats.cs</Link>
     </Compile>
