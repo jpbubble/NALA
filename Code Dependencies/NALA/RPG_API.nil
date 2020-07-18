@@ -118,6 +118,10 @@ class RPGStat
 		NALA_RPG:SetStatValue(self.ChTag,self.StTag,value)
 	end
 	
+	void Link(string TargetChar)
+		NALA_RPG:LinkStat(self.ChTag,self.StTag,TargetChar)
+	end
+	
 	void CONSTRUCTOR(string char,string stat)
 		assert(NALA_RPG:StatExists(char,stat) ,"You cannot use 'new RPGStat()' directly!")
 		self.ChTag = char

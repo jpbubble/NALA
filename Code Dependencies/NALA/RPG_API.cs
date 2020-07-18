@@ -161,6 +161,17 @@ namespace NALA {
             }
             st.Value = value;
         }
+
+        public void LinkStat(string chrtag,string stat,string targetchar) {
+            var tch = RPG.GrabChar(targetchar); if (tch == null) SBubble.MyError($"LinkStat(\"{chrtag}\",\"{stat}\",\"{targetchar}\"):","Target character doesn't exist!", SBubble.TraceLua(statename));
+            //var tst = tch.Stat(stat); if (tst == null) SBubble.MyError($"LinkStat(\"{chrtag}\",\"{stat}\",\"{targetchar}\"):", "Target charactet does not have that stat!", SBubble.TraceLua(statename));
+            var ch = RPG.GrabChar(chrtag); if (ch == null) SBubble.MyError($"LinkStat(\"{chrtag}\",\"{stat}\",\"{targetchar}\"):", "Character doesn't exist!", SBubble.TraceLua(statename));
+            try {
+                ch.LinkStat(targetchar, stat);
+            } catch(Exception e) {
+                SBubble.MyError("Giant mess up in the .NET code I guess", $"{e.Message}", SBubble.TraceLua(statename));
+            }
+        }
         #endregion
 
         #region Points
