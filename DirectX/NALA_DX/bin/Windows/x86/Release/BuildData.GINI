@@ -4,7 +4,7 @@ NALA
 
 
 
-(c) Jeroen P. Broks, 
+(c) Jeroen P. Broks, 2019
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -21,7 +21,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 Please note that some references to data like pictures or audio, do not automatically
 fall under this licenses. Mostly this is noted in the respective files.
 
-Version: 19.08.05
+Version: 20.07.19
 [/lic]
 
 
@@ -48,6 +48,3 @@ NALA_DX => {ExeName}
 [list:RUNMODES]
 CB
 RF
-
-
-
